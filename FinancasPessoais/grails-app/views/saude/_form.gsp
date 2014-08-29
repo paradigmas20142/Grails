@@ -18,28 +18,31 @@
 	<g:textField name="motivoGasto" value="${saudeInstance?.motivoGasto}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: saudeInstance, field: 'temPlanoSaude', 'error')} ">
-	<label for="temPlanoSaude">
-		<g:message code="saude.temPlanoSaude.label" default="Tem Plano Saude" />
-		
-	</label>
-	<label class="planoSaude1">Sim<g:radio name="temPlanoSaude1" value="1" /></label>
-	<label class="planoSaude1">Não</label><g:radio name="temPlanoSaude1" value="2"  checked = "checked" />
+<div class="fieldcontain ${hasErrors(bean: saudeInstance, field: 'planoSaude', 'error')} ">
+  <div class = "medicine">
+	<label>Comprou remedio?</label>
+
+	<label class="buyMedicine">Sim&nbsp
+    <g:radio name="medicine" value="1" />
+  </label>
+
+	<label class="dontBuyMedicine">Não&nbsp
+    <g:radio name="medicine" value="2"  checked = "checked" />
+  </label>
+  </div>
+
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: saudeInstance, field: 'tipoHospital', 'error')} ">
-	<label for="tipoHospital">
-		<g:message code="saude.tipoHospital.label" default="Tipo Hospital" />
-		
-	</label>
-	<g:textField name="tipoHospital" value="${saudeInstance?.tipoHospital}"/>
-</div>
+  <div class = "hospitalType">
+	<label>Rede do Hospital</label>
 
-<div class="fieldcontain ${hasErrors(bean: saudeInstance, field: 'valorGasto', 'error')} required">
-	<label for="valorGasto">
-		<g:message code="saude.valorGasto.label" default="Valor Gasto" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="valorGasto" type="number" value="${saudeInstance.valorGasto}" required=""/>
-</div>
+	<label class="privateHospital">Particular&nbsp
+    <g:radio name="hospital" value="1" />
+  </label>
 
+	<label class="publicHospital">Publico&nbsp
+    <g:radio name="hospital" value="2"  checked = "checked" />
+  </label>
+  </div>
+</div>
