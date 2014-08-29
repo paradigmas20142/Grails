@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet author="david (generated)" id="1409276630850-1">
+        <createTable tableName="PESSOA">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_8"/>
+            </column>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ENDERECO" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NOME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SALARIO" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SIT_FINANCEIRA" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TELEFONE" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="david (generated)" id="1409276630850-2">
+        <createTable tableName="SAUDE">
+            <column autoIncrement="true" name="ID" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_4"/>
+            </column>
+            <column name="VERSION" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FORMA_PAGAMENTO" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MOTIVO_GASTO" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TEM_PLANO_SAUDE" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIPO_HOSPITAL" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VALOR_GASTO" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
