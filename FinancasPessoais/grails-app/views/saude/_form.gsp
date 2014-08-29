@@ -1,6 +1,6 @@
 <%@ page import="financaspessoais.Saude" %>
-
-
+<g:javascript library="application"/>
+<r:require module="jquery-ui"/>
 
 <div class="fieldcontain ${hasErrors(bean: saudeInstance, field: 'formaPagamento', 'error')} ">
 	<label for="formaPagamento">
@@ -23,7 +23,8 @@
 		<g:message code="saude.temPlanoSaude.label" default="Tem Plano Saude" />
 		
 	</label>
-	<g:checkBox name="temPlanoSaude" value="${saudeInstance?.temPlanoSaude}" />
+	<label class="planoSaude1">Sim<g:radio name="temPlanoSaude1" value="1" /></label>
+	<label class="planoSaude1">Não</label><g:radio name="temPlanoSaude1" value="2"  checked = "checked" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: saudeInstance, field: 'tipoHospital', 'error')} ">
