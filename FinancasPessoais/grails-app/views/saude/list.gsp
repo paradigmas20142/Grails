@@ -24,15 +24,17 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="gastoTotal" title="${message(code: 'saude.gastoTotal.label', default: 'Gasto Total')}" />
+					
+						<th><g:message code="saude.cartao.label" default="Cartao" /></th>
+					
+						<g:sortableColumn property="valorGastoRemedio" title="${message(code: 'saude.valorGastoRemedio.label', default: 'Valor Gasto Remedio')}" />
+					
+						<g:sortableColumn property="valorGastoConsulta" title="${message(code: 'saude.valorGastoConsulta.label', default: 'Valor Gasto Consulta')}" />
+					
 						<g:sortableColumn property="formaPagamento" title="${message(code: 'saude.formaPagamento.label', default: 'Forma Pagamento')}" />
 					
 						<g:sortableColumn property="motivoGasto" title="${message(code: 'saude.motivoGasto.label', default: 'Motivo Gasto')}" />
-					
-						<g:sortableColumn property="temPlanoSaude" title="${message(code: 'saude.temPlanoSaude.label', default: 'Tem Plano Saude')}" />
-					
-						<g:sortableColumn property="tipoHospital" title="${message(code: 'saude.tipoHospital.label', default: 'Tipo Hospital')}" />
-					
-						<g:sortableColumn property="valorGasto" title="${message(code: 'saude.valorGasto.label', default: 'Valor Gasto')}" />
 					
 					</tr>
 				</thead>
@@ -40,15 +42,17 @@
 				<g:each in="${saudeInstanceList}" status="i" var="saudeInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${saudeInstance.id}">${fieldValue(bean: saudeInstance, field: "formaPagamento")}</g:link></td>
+						<td><g:link action="show" id="${saudeInstance.id}">${fieldValue(bean: saudeInstance, field: "gastoTotal")}</g:link></td>
+					
+						<td>${fieldValue(bean: saudeInstance, field: "cartao")}</td>
+					
+						<td>${fieldValue(bean: saudeInstance, field: "valorGastoRemedio")}</td>
+					
+						<td>${fieldValue(bean: saudeInstance, field: "valorGastoConsulta")}</td>
+					
+						<td>${fieldValue(bean: saudeInstance, field: "formaPagamento")}</td>
 					
 						<td>${fieldValue(bean: saudeInstance, field: "motivoGasto")}</td>
-					
-						<td><g:formatBoolean boolean="${saudeInstance.temPlanoSaude}" /></td>
-					
-						<td>${fieldValue(bean: saudeInstance, field: "tipoHospital")}</td>
-					
-						<td>${fieldValue(bean: saudeInstance, field: "valorGasto")}</td>
 					
 					</tr>
 				</g:each>
