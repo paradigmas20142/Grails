@@ -23,6 +23,42 @@
 			</g:if>
 			<ol class="property-list saude">
 			
+				<g:if test="${saudeInstance?.gastoTotal}">
+				<li class="fieldcontain">
+					<span id="gastoTotal-label" class="property-label"><g:message code="saude.gastoTotal.label" default="Gasto Total" /></span>
+					
+						<span class="property-value" aria-labelledby="gastoTotal-label"><g:fieldValue bean="${saudeInstance}" field="gastoTotal"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${saudeInstance?.cartao}">
+				<li class="fieldcontain">
+					<span id="cartao-label" class="property-label"><g:message code="saude.cartao.label" default="Cartao" /></span>
+					
+						<span class="property-value" aria-labelledby="cartao-label"><g:link controller="cartao" action="show" id="${saudeInstance?.cartao?.id}">${saudeInstance?.cartao?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${saudeInstance?.valorGastoRemedio}">
+				<li class="fieldcontain">
+					<span id="valorGastoRemedio-label" class="property-label"><g:message code="saude.valorGastoRemedio.label" default="Valor Gasto Remedio" /></span>
+					
+						<span class="property-value" aria-labelledby="valorGastoRemedio-label"><g:fieldValue bean="${saudeInstance}" field="valorGastoRemedio"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${saudeInstance?.valorGastoConsulta}">
+				<li class="fieldcontain">
+					<span id="valorGastoConsulta-label" class="property-label"><g:message code="saude.valorGastoConsulta.label" default="Valor Gasto Consulta" /></span>
+					
+						<span class="property-value" aria-labelledby="valorGastoConsulta-label"><g:fieldValue bean="${saudeInstance}" field="valorGastoConsulta"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${saudeInstance?.formaPagamento}">
 				<li class="fieldcontain">
 					<span id="formaPagamento-label" class="property-label"><g:message code="saude.formaPagamento.label" default="Forma Pagamento" /></span>
@@ -41,29 +77,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${saudeInstance?.temPlanoSaude}">
-				<li class="fieldcontain">
-					<span id="temPlanoSaude-label" class="property-label"><g:message code="saude.temPlanoSaude.label" default="Tem Plano Saude" /></span>
-					
-						<span class="property-value" aria-labelledby="temPlanoSaude-label"><g:formatBoolean boolean="${saudeInstance?.temPlanoSaude}" /></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${saudeInstance?.tipoHospital}">
 				<li class="fieldcontain">
 					<span id="tipoHospital-label" class="property-label"><g:message code="saude.tipoHospital.label" default="Tipo Hospital" /></span>
 					
 						<span class="property-value" aria-labelledby="tipoHospital-label"><g:fieldValue bean="${saudeInstance}" field="tipoHospital"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${saudeInstance?.valorGasto}">
-				<li class="fieldcontain">
-					<span id="valorGasto-label" class="property-label"><g:message code="saude.valorGasto.label" default="Valor Gasto" /></span>
-					
-						<span class="property-value" aria-labelledby="valorGasto-label"><g:fieldValue bean="${saudeInstance}" field="valorGasto"/></span>
 					
 				</li>
 				</g:if>

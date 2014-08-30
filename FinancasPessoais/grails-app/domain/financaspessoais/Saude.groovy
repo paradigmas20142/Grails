@@ -2,12 +2,21 @@ package financaspessoais
 
 class Saude extends Categoria {
 
-    Boolean temPlanoSaude
-    Boolean tipoHospital
-    String planoSaude
+    String tipoHospital
+    Integer valorGastoRemedio
+    Integer valorGastoConsulta
+    Cartao cartao
+
 
 
     static constraints = {
+      cartao nullable: true
+      valorGastoRemedio nullable: true
+      valorGastoConsulta nullable: true
+    }
+
+    static mapping = {
+      table "saude"
     }
 }
 
