@@ -227,7 +227,8 @@ fieldset,
 .fieldcontain .property-label {
 	color: #666666;
 	text-align: right;
-	width: 25%;
+	width: 160px;
+  height: 50px;
 }
 
 .fieldcontain .property-label {
