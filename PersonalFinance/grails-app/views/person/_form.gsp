@@ -2,6 +2,14 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'user', 'error')} ">
+	<label for="user">
+		<g:message code="person.user.label" default="User" />
+		
+	</label>
+	<g:select id="user" name="user.id" from="${personalfinance.User.list()}" optionKey="id" value="${personInstance?.user?.id}" class="many-to-one" noSelection="['null': '']"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'adress', 'error')} ">
 	<label for="adress">
 		<g:message code="person.adress.label" default="Adress" />

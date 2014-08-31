@@ -23,6 +23,15 @@
 			</g:if>
 			<ol class="property-list person">
 			
+				<g:if test="${personInstance?.user}">
+				<li class="fieldcontain">
+					<span id="user-label" class="property-label"><g:message code="person.user.label" default="User" /></span>
+					
+						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${personInstance?.user?.id}">${personInstance?.user?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${personInstance?.adress}">
 				<li class="fieldcontain">
 					<span id="adress-label" class="property-label"><g:message code="person.adress.label" default="Adress" /></span>
