@@ -15,7 +15,7 @@
 		<g:message code="user.password.label" default="Password" />
 		
 	</label>
-	<g:textField name="password" value="${userInstance?.password}"/>
+	<g:passwordField name="password" value="${userInstance?.password}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'person', 'error')} required">
