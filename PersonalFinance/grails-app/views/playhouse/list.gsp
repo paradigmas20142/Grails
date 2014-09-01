@@ -42,7 +42,7 @@
 					
 						<td><g:link action="show" id="${playhouseInstance.id}">${fieldValue(bean: playhouseInstance, field: "spentTotal")}</g:link></td>
 					
-						<td><g:formatDate date="${playhouseInstance.data}" /></td>
+						<td><g:formatDate date="${playhouseInstance.data}" type="date" style="SHORT" /></td>
 					
 						<td>${fieldValue(bean: playhouseInstance, field: "formPayment")}</td>
 					

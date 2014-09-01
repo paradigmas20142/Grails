@@ -36,7 +36,7 @@
 				<li class="fieldcontain">
 					<span id="data-label" class="property-label"><g:message code="playhouse.data.label" default="Data" /></span>
 					
-						<span class="property-value" aria-labelledby="data-label"><g:formatDate date="${playhouseInstance?.data}" /></span>
+						<span class="property-value" aria-labelledby="data-label"><g:formatDate date="${playhouseInstance?.data}" type="date" style="SHORT" /></span>
 					
 				</li>
 				</g:if>
