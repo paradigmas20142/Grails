@@ -1,6 +1,6 @@
 databaseChangeLog = {
 
-	changeSet(author: "david (generated)", id: "1409519419915-1") {
+	changeSet(author: "carolina (generated)", id: "1409541797529-1") {
 		createTable(tableName: "CREDIT_CARD") {
 			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_6")
@@ -24,7 +24,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "david (generated)", id: "1409519419915-2") {
+	changeSet(author: "carolina (generated)", id: "1409541797529-2") {
 		createTable(tableName: "HELTH") {
 			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_4")
@@ -58,7 +58,7 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "david (generated)", id: "1409519419915-3") {
+	changeSet(author: "carolina (generated)", id: "1409541797529-3") {
 		createTable(tableName: "PERSON") {
 			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
 				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_8")
@@ -90,7 +90,35 @@ databaseChangeLog = {
 		}
 	}
 
-	changeSet(author: "david (generated)", id: "1409519419915-4") {
+	changeSet(author: "carolina (generated)", id: "1409541797529-4") {
+		createTable(tableName: "USER") {
+			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_2")
+			}
+
+			column(name: "VERSION", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "LOGIN", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "PASSWORD", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "PERSON_ID", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409541797529-5") {
 		addForeignKeyConstraint(baseColumnNames: "CREDIT_CARD_ID", baseTableName: "HELTH", baseTableSchemaName: "PUBLIC", constraintName: "FK5E919C3632F5001", deferrable: "false", initiallyDeferred: "false", onDelete: "RESTRICT", onUpdate: "RESTRICT", referencedColumnNames: "ID", referencedTableName: "CREDIT_CARD", referencedTableSchemaName: "PUBLIC", referencesUniqueColumn: "false")
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409541797529-6") {
+		addForeignKeyConstraint(baseColumnNames: "PERSON_ID", baseTableName: "USER", baseTableSchemaName: "PUBLIC", constraintName: "FK36EBCBB901048E", deferrable: "false", initiallyDeferred: "false", onDelete: "RESTRICT", onUpdate: "RESTRICT", referencedColumnNames: "ID", referencedTableName: "PERSON", referencedTableSchemaName: "PUBLIC", referencesUniqueColumn: "false")
 	}
 }
