@@ -19,7 +19,18 @@ class HelthController {
         [helthInstance: new Helth(params)]
     }
 
+    def calcInstanceSpent(params){
+      def instanceSpent = 0
+      params.each {key,value ->
+      if (key.substring(0,5) == "spent"){
+        instanceSpent += value.toInteger()
+        }
+      }
+      return instanceSpent
+    }
+
     def save() {
+        params["spentTotal"] = calcInstanceSpent(params)
         def helthInstance = new Helth(params)
         if (!helthInstance.save(flush: true)) {
             render(view: "create", model: [helthInstance: helthInstance])
