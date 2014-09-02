@@ -36,15 +36,13 @@
 </label>
 
 
-<div class="fieldcontain ${hasErrors(bean: helthInstance, field: 'creditcard', 'error')} ">
-<label for="creditcard">
-<g:message code="helth.creditcard.label" default="CreditCard" />
-
-</label>
-<g:select id="creditcard" name="creditCard.id" from="${personalfinance.CreditCard.list()}" optionKey="id" value="${helthInstance?.creditCard?.id}" class="many-to-one" noSelection="['null': '']"/>
+<div class="fieldcontain ${hasErrors(bean: sportInstance, field: 'creditcard', 'error')} ">
+	<label for="creditcard">
+		<g:message code="sport.creditcard.label" default="Cartão de crédito" />
+		
+	</label>
+	<g:select id="creditcard" name="creditcard.id" from="${personalfinance.CreditCard.list()}" optionKey="id" value="${sportInstance?.creditcard?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
-</div>
-
 
 <div class="fieldcontain ${hasErrors(bean: sportInstance, field: 'place', 'error')} ">
 	<label for="place">

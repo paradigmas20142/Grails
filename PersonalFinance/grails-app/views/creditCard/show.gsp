@@ -23,6 +23,33 @@
 			</g:if>
 			<ol class="property-list creditCard">
 			
+				<g:if test="${creditCardInstance?.helth}">
+				<li class="fieldcontain">
+					<span id="helth-label" class="property-label"><g:message code="creditCard.helth.label" default="Helth" /></span>
+					
+						<span class="property-value" aria-labelledby="helth-label"><g:link controller="helth" action="show" id="${creditCardInstance?.helth?.id}">${creditCardInstance?.helth?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${creditCardInstance?.sport}">
+				<li class="fieldcontain">
+					<span id="sport-label" class="property-label"><g:message code="creditCard.sport.label" default="Sport" /></span>
+					
+						<span class="property-value" aria-labelledby="sport-label"><g:link controller="sport" action="show" id="${creditCardInstance?.sport?.id}">${creditCardInstance?.sport?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${creditCardInstance?.cableTV}">
+				<li class="fieldcontain">
+					<span id="cableTV-label" class="property-label"><g:message code="creditCard.cableTV.label" default="Cable TV" /></span>
+					
+						<span class="property-value" aria-labelledby="cableTV-label"><g:link controller="cableTV" action="show" id="${creditCardInstance?.cableTV?.id}">${creditCardInstance?.cableTV?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${creditCardInstance?.cardCompany}">
 				<li class="fieldcontain">
 					<span id="cardCompany-label" class="property-label"><g:message code="creditCard.cardCompany.label" default="Card Company" /></span>
@@ -46,15 +73,6 @@
 					<span id="cardPay-label" class="property-label"><g:message code="creditCard.cardPay.label" default="Card Pay" /></span>
 					
 						<span class="property-value" aria-labelledby="cardPay-label"><g:formatDate date="${creditCardInstance?.cardPay}" /></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${creditCardInstance?.helth}">
-				<li class="fieldcontain">
-					<span id="helth-label" class="property-label"><g:message code="creditCard.helth.label" default="Helth" /></span>
-					
-						<span class="property-value" aria-labelledby="helth-label"><g:link controller="helth" action="show" id="${creditCardInstance?.helth?.id}">${creditCardInstance?.helth?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

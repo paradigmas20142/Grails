@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="spentTotal" title="${message(code: 'sport.spentTotal.label', default: 'Gasto Total')}" />
 					
+						<th><g:message code="sport.creditcard.label" default="Cartão de Crédito" /></th>
+					
 						<g:sortableColumn property="data" title="${message(code: 'sport.data.label', default: 'Data')}" />
 					
 						<g:sortableColumn property="formPayment" title="${message(code: 'sport.formPayment.label', default: 'Forma de Pagamento')}" />
@@ -42,7 +44,9 @@
 					
 						<td><g:link action="show" id="${sportInstance.id}">${fieldValue(bean: sportInstance, field: "spentTotal")}</g:link></td>
 					
-						<td><g:formatDate date="${sportInstance.data}" type="date" style="SHORT" /></td>
+						<td>${fieldValue(bean: sportInstance, field: "creditcard")}</td>
+					
+						<td><g:formatDate date="${sportInstance.data}" /></td>
 					
 						<td>${fieldValue(bean: sportInstance, field: "formPayment")}</td>
 					

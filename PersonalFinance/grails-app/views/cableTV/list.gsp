@@ -24,13 +24,15 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="spentTotal" title="${message(code: 'cableTV.spentTotal.label', default: 'Spent Total')}" />
+						<g:sortableColumn property="spentTotal" title="${message(code: 'cableTV.spentTotal.label', default: 'Valor Total')}" />
 					
-						<g:sortableColumn property="dueDate" title="${message(code: 'cableTV.dueDate.label', default: 'Due Date')}" />
+						<th><g:message code="cableTV.creditcard.label" default="Cartão de Crédito" /></th>
 					
-						<g:sortableColumn property="formPayment" title="${message(code: 'cableTV.formPayment.label', default: 'Form Payment')}" />
+						<g:sortableColumn property="dueDate" title="${message(code: 'cableTV.dueDate.label', default: 'Data de Vencimento')}" />
 					
-						<g:sortableColumn property="reasonExpense" title="${message(code: 'cableTV.reasonExpense.label', default: 'Reason Expense')}" />
+						<g:sortableColumn property="formPayment" title="${message(code: 'cableTV.formPayment.label', default: 'Forma de Pagamento')}" />
+					
+						<g:sortableColumn property="reasonExpense" title="${message(code: 'cableTV.reasonExpense.label', default: 'Motivo do Gasto')}" />
 					
 					</tr>
 				</thead>
@@ -39,6 +41,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${cableTVInstance.id}">${fieldValue(bean: cableTVInstance, field: "spentTotal")}</g:link></td>
+					
+						<td>${fieldValue(bean: cableTVInstance, field: "creditcard")}</td>
 					
 						<td><g:formatDate date="${cableTVInstance.dueDate}" /></td>
 					
