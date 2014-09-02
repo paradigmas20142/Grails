@@ -28,8 +28,6 @@
 					
 						<th><g:message code="creditCard.sport.label" default="Sport" /></th>
 					
-						<th><g:message code="creditCard.cableTV.label" default="Cable TV" /></th>
-					
 						<g:sortableColumn property="cardCompany" title="${message(code: 'creditCard.cardCompany.label', default: 'Card Company')}" />
 					
 						<g:sortableColumn property="cardLimit" title="${message(code: 'creditCard.cardLimit.label', default: 'Card Limit')}" />
@@ -45,8 +43,6 @@
 						<td><g:link action="show" id="${creditCardInstance.id}">${fieldValue(bean: creditCardInstance, field: "helth")}</g:link></td>
 					
 						<td>${fieldValue(bean: creditCardInstance, field: "sport")}</td>
-					
-						<td>${fieldValue(bean: creditCardInstance, field: "cableTV")}</td>
 					
 						<td>${fieldValue(bean: creditCardInstance, field: "cardCompany")}</td>
 					

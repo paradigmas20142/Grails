@@ -24,13 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="spentTotal" title="${message(code: 'water.spentTotal.label', default: 'Spent Total')}" />
+						<g:sortableColumn property="spentTotal" title="${message(code: 'water.spentTotal.label', default: 'Valor Total')}" />
 					
-						<g:sortableColumn property="dueDate" title="${message(code: 'water.dueDate.label', default: 'Due Date')}" />
+						<g:sortableColumn property="dueDate" title="${message(code: 'water.dueDate.label', default: 'Data de Vencimento')}" />
 					
-						<g:sortableColumn property="formPayment" title="${message(code: 'water.formPayment.label', default: 'Form Payment')}" />
-					
-						<g:sortableColumn property="reasonExpense" title="${message(code: 'water.reasonExpense.label', default: 'Reason Expense')}" />
+						<g:sortableColumn property="paymentDate" title="${message(code: 'water.paymentDate.label', default: 'Data de Pagamento')}" />
 					
 					</tr>
 				</thead>
@@ -40,12 +38,10 @@
 					
 						<td><g:link action="show" id="${waterInstance.id}">${fieldValue(bean: waterInstance, field: "spentTotal")}</g:link></td>
 					
-						<td><g:formatDate date="${waterInstance.dueDate}" /></td>
+						<td><g:formatDate date="${waterInstance.dueDate}" type="date" style="SHORT"/></td>
 					
-						<td>${fieldValue(bean: waterInstance, field: "formPayment")}</td>
-					
-						<td>${fieldValue(bean: waterInstance, field: "reasonExpense")}</td>
-					
+						<td><g:formatDate date="${waterInstance.paymentDate}" type="date" style="SHORT"/></td>
+										
 					</tr>
 				</g:each>
 				</tbody>

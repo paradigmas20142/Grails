@@ -18,14 +18,6 @@
 	<g:select id="sport" name="sport.id" from="${personalfinance.Sport.list()}" optionKey="id" value="${creditCardInstance?.sport?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: creditCardInstance, field: 'cableTV', 'error')} ">
-	<label for="cableTV">
-		<g:message code="creditCard.cableTV.label" default="Cable TV" />
-		
-	</label>
-	<g:select id="cableTV" name="cableTV.id" from="${personalfinance.accounts.CableTV.list()}" optionKey="id" value="${creditCardInstance?.cableTV?.id}" class="many-to-one" noSelection="['null': '']"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: creditCardInstance, field: 'cardCompany', 'error')} ">
 	<label for="cardCompany">
 		<g:message code="creditCard.cardCompany.label" default="Card Company" />

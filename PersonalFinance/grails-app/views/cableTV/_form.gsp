@@ -18,29 +18,20 @@
 	<g:datePicker name="dueDate" precision="day"  value="${cableTVInstance?.dueDate}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: saudeInstance, field: 'formaPagamento', 'error')} ">
-<div class = "payment">
-<label>Forma de pagamento</label>
-
-<label class="money">Dinheiro&nbsp
-<g:radio name="formPayment" value="money" />
-</label>
-
-<label class="creditcard">Cartão&nbsp
-
-<g:radio name="formPayment" value="card" id = "credicard"/>
-</label>
-
-<label class="check">Cheque&nbsp
-<g:radio name="formPayment" value="check" />
-</label>
-
-<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'creditcard', 'error')} ">
-	<label for="creditcard">
-		<g:message code="cableTV.creditcard.label" default="Cartão de crédito" />
+<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'formPayment', 'error')} ">
+	<label for="formPayment">
+		<g:message code="cableTV.formPayment.label" default="Forma de Pagamento" />
 		
 	</label>
-	<g:select id="creditcard" name="creditcard.id" from="${personalfinance.CreditCard.list()}" optionKey="id" value="${cableTVInstance?.creditcard?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:textField name="formPayment" value="Dinheiro"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'paymentDate', 'error')} required">
+	<label for="paymentDate">
+		<g:message code="cableTV.paymentDate.label" default="Data do Pagamento" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:datePicker name="paymentDate" precision="day"  value="${cableTVInstance?.paymentDate}"  />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'reasonExpense', 'error')} ">
@@ -48,6 +39,6 @@
 		<g:message code="cableTV.reasonExpense.label" default="Motivo do Gasto" />
 		
 	</label>
-	<g:textField name="reasonExpense" value="${cableTVInstance?.reasonExpense}"/>
+	<g:textField name="reasonExpense" value="TV a cabo"/>
 </div>
 

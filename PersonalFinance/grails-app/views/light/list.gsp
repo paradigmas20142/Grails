@@ -24,13 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="spentTotal" title="${message(code: 'light.spentTotal.label', default: 'Spent Total')}" />
+						<g:sortableColumn property="spentTotal" title="${message(code: 'light.spentTotal.label', default: 'Valor Total')}" />
+											
+						<g:sortableColumn property="dueDate" title="${message(code: 'light.dueDate.label', default: 'Data de Vencimento')}" />
 					
-						<g:sortableColumn property="dueDate" title="${message(code: 'light.dueDate.label', default: 'Due Date')}" />
-					
-						<g:sortableColumn property="formPayment" title="${message(code: 'light.formPayment.label', default: 'Form Payment')}" />
-					
-						<g:sortableColumn property="reasonExpense" title="${message(code: 'light.reasonExpense.label', default: 'Reason Expense')}" />
+						<g:sortableColumn property="paymentDate" title="${message(code: 'light.paymentDate.label', default: 'Data de Pagamento')}" />
 					
 					</tr>
 				</thead>
@@ -40,11 +38,9 @@
 					
 						<td><g:link action="show" id="${lightInstance.id}">${fieldValue(bean: lightInstance, field: "spentTotal")}</g:link></td>
 					
-						<td><g:formatDate date="${lightInstance.dueDate}" /></td>
+						<td><g:formatDate date="${lightInstance.dueDate}" type="date" style='SHORT'/></td>
 					
-						<td>${fieldValue(bean: lightInstance, field: "formPayment")}</td>
-					
-						<td>${fieldValue(bean: lightInstance, field: "reasonExpense")}</td>
+						<td><g:formatDate date="${lightInstance.paymentDate}" type="date" style='SHORT'/></td>
 					
 					</tr>
 				</g:each>

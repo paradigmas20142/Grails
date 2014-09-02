@@ -24,13 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="spentTotal" title="${message(code: 'internet.spentTotal.label', default: 'Spent Total')}" />
+						<g:sortableColumn property="spentTotal" title="${message(code: 'internet.spentTotal.label', default: 'Valor Total')}" />
 					
-						<g:sortableColumn property="dueDate" title="${message(code: 'internet.dueDate.label', default: 'Due Date')}" />
+						<g:sortableColumn property="dueDate" title="${message(code: 'internet.dueDate.label', default: 'Data de Vencimento')}" />
 					
-						<g:sortableColumn property="formPayment" title="${message(code: 'internet.formPayment.label', default: 'Form Payment')}" />
-					
-						<g:sortableColumn property="reasonExpense" title="${message(code: 'internet.reasonExpense.label', default: 'Reason Expense')}" />
+						<g:sortableColumn property="paymentDate" title="${message(code: 'internet.paymentDate.label', default: 'Data de Pagamento')}" />
 					
 					</tr>
 				</thead>
@@ -40,11 +38,9 @@
 					
 						<td><g:link action="show" id="${internetInstance.id}">${fieldValue(bean: internetInstance, field: "spentTotal")}</g:link></td>
 					
-						<td><g:formatDate date="${internetInstance.dueDate}" /></td>
+						<td><g:formatDate date="${internetInstance.dueDate}" type="date" style='SHORT'/></td>
 					
-						<td>${fieldValue(bean: internetInstance, field: "formPayment")}</td>
-					
-						<td>${fieldValue(bean: internetInstance, field: "reasonExpense")}</td>
+						<td><g:formatDate date="${internetInstance.paymentDate}" type="date" style='SHORT'/></td>
 					
 					</tr>
 				</g:each>

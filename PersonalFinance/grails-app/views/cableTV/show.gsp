@@ -32,20 +32,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${cableTVInstance?.creditcard}">
-				<li class="fieldcontain">
-					<span id="creditcard-label" class="property-label"><g:message code="cableTV.creditcard.label" default="Cartão de Crédito" /></span>
-					
-						<span class="property-value" aria-labelledby="creditcard-label"><g:link controller="creditCard" action="show" id="${cableTVInstance?.creditcard?.id}">${cableTVInstance?.creditcard?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${cableTVInstance?.dueDate}">
 				<li class="fieldcontain">
 					<span id="dueDate-label" class="property-label"><g:message code="cableTV.dueDate.label" default="Data de Vencimento" /></span>
 					
-						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${cableTVInstance?.dueDate}" /></span>
+						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${cableTVInstance?.dueDate}" type="date" style='SHORT'/></span>
 					
 				</li>
 				</g:if>
@@ -59,11 +50,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${cableTVInstance?.reasonExpense}">
+				<g:if test="${cableTVInstance?.paymentDate}">
 				<li class="fieldcontain">
-					<span id="reasonExpense-label" class="property-label"><g:message code="cableTV.reasonExpense.label" default="Motivo do Gasto" /></span>
+					<span id="paymentDate-label" class="property-label"><g:message code="cableTV.paymentDate.label" default="Data de Pagamento" /></span>
 					
-						<span class="property-value" aria-labelledby="reasonExpense-label"><g:fieldValue bean="${cableTVInstance}" field="reasonExpense"/></span>
+						<span class="property-value" aria-labelledby="paymentDate-label"><g:formatDate date="${cableTVInstance?.paymentDate}" type="date" style='SHORT'/></span>
 					
 				</li>
 				</g:if>

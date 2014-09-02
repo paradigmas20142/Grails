@@ -25,7 +25,7 @@
 			
 				<g:if test="${mobilePhoneInstance?.spentTotal}">
 				<li class="fieldcontain">
-					<span id="spentTotal-label" class="property-label"><g:message code="mobilePhone.spentTotal.label" default="Spent Total" /></span>
+					<span id="spentTotal-label" class="property-label"><g:message code="mobilePhone.spentTotal.label" default="Valor Total" /></span>
 					
 						<span class="property-value" aria-labelledby="spentTotal-label"><g:fieldValue bean="${mobilePhoneInstance}" field="spentTotal"/></span>
 					
@@ -34,31 +34,31 @@
 			
 				<g:if test="${mobilePhoneInstance?.dueDate}">
 				<li class="fieldcontain">
-					<span id="dueDate-label" class="property-label"><g:message code="mobilePhone.dueDate.label" default="Due Date" /></span>
+					<span id="dueDate-label" class="property-label"><g:message code="mobilePhone.dueDate.label" default="Data de Vencimento" /></span>
 					
-						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${mobilePhoneInstance?.dueDate}" /></span>
+						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${mobilePhoneInstance?.dueDate}" type="date" style="SHORT"/></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${mobilePhoneInstance?.formPayment}">
 				<li class="fieldcontain">
-					<span id="formPayment-label" class="property-label"><g:message code="mobilePhone.formPayment.label" default="Form Payment" /></span>
+					<span id="formPayment-label" class="property-label"><g:message code="mobilePhone.formPayment.label" default="Forma de Pagamento" /></span>
 					
 						<span class="property-value" aria-labelledby="formPayment-label"><g:fieldValue bean="${mobilePhoneInstance}" field="formPayment"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${mobilePhoneInstance?.reasonExpense}">
+				<g:if test="${mobilePhoneInstance?.paymentDate}">
 				<li class="fieldcontain">
-					<span id="reasonExpense-label" class="property-label"><g:message code="mobilePhone.reasonExpense.label" default="Reason Expense" /></span>
+					<span id="paymentDate-label" class="property-label"><g:message code="mobilePhone.paymentDate.label" default="Data de Pagamento" /></span>
 					
-						<span class="property-value" aria-labelledby="reasonExpense-label"><g:fieldValue bean="${mobilePhoneInstance}" field="reasonExpense"/></span>
+						<span class="property-value" aria-labelledby="paymentDate-label"><g:formatDate date="${mobilePhoneInstance?.paymentDate}" type="date" style="SHORT"/></span>
 					
 				</li>
 				</g:if>
-			
+						
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

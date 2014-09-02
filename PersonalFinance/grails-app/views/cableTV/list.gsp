@@ -26,13 +26,9 @@
 					
 						<g:sortableColumn property="spentTotal" title="${message(code: 'cableTV.spentTotal.label', default: 'Valor Total')}" />
 					
-						<th><g:message code="cableTV.creditcard.label" default="Cartão de Crédito" /></th>
-					
 						<g:sortableColumn property="dueDate" title="${message(code: 'cableTV.dueDate.label', default: 'Data de Vencimento')}" />
 					
-						<g:sortableColumn property="formPayment" title="${message(code: 'cableTV.formPayment.label', default: 'Forma de Pagamento')}" />
-					
-						<g:sortableColumn property="reasonExpense" title="${message(code: 'cableTV.reasonExpense.label', default: 'Motivo do Gasto')}" />
+						<g:sortableColumn property="paymentDate" title="${message(code: 'cableTV.paymentDate.label', default: 'Data de Pagamento')}" />
 					
 					</tr>
 				</thead>
@@ -42,13 +38,9 @@
 					
 						<td><g:link action="show" id="${cableTVInstance.id}">${fieldValue(bean: cableTVInstance, field: "spentTotal")}</g:link></td>
 					
-						<td>${fieldValue(bean: cableTVInstance, field: "creditcard")}</td>
+						<td><g:formatDate date="${cableTVInstance.dueDate}" type="date" style='SHORT' /></td>				
 					
-						<td><g:formatDate date="${cableTVInstance.dueDate}" /></td>
-					
-						<td>${fieldValue(bean: cableTVInstance, field: "formPayment")}</td>
-					
-						<td>${fieldValue(bean: cableTVInstance, field: "reasonExpense")}</td>
+						<td><g:formatDate date="${cableTVInstance.paymentDate}" type="date" style='SHORT'/></td>
 					
 					</tr>
 				</g:each>

@@ -24,13 +24,11 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="spentTotal" title="${message(code: 'phone.spentTotal.label', default: 'Spent Total')}" />
+						<g:sortableColumn property="spentTotal" title="${message(code: 'phone.spentTotal.label', default: 'Valor Total')}" />
 					
-						<g:sortableColumn property="dueDate" title="${message(code: 'phone.dueDate.label', default: 'Due Date')}" />
-					
-						<g:sortableColumn property="formPayment" title="${message(code: 'phone.formPayment.label', default: 'Form Payment')}" />
-					
-						<g:sortableColumn property="reasonExpense" title="${message(code: 'phone.reasonExpense.label', default: 'Reason Expense')}" />
+						<g:sortableColumn property="dueDate" title="${message(code: 'phone.dueDate.label', default: 'Data de Vencimento')}" />
+										
+						<g:sortableColumn property="paymentDate" title="${message(code: 'phone.paymentDate.label', default: 'Data de Pagamento')}" />
 					
 					</tr>
 				</thead>
@@ -40,12 +38,10 @@
 					
 						<td><g:link action="show" id="${phoneInstance.id}">${fieldValue(bean: phoneInstance, field: "spentTotal")}</g:link></td>
 					
-						<td><g:formatDate date="${phoneInstance.dueDate}" /></td>
+						<td><g:formatDate date="${phoneInstance.dueDate}" type="date" style="SHORT"/></td>
 					
-						<td>${fieldValue(bean: phoneInstance, field: "formPayment")}</td>
-					
-						<td>${fieldValue(bean: phoneInstance, field: "reasonExpense")}</td>
-					
+						<td><g:formatDate date="${phoneInstance.paymentDate}" type="date" style="SHORT"/></td>
+										
 					</tr>
 				</g:each>
 				</tbody>

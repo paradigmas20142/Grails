@@ -25,7 +25,7 @@
 			
 				<g:if test="${internetInstance?.spentTotal}">
 				<li class="fieldcontain">
-					<span id="spentTotal-label" class="property-label"><g:message code="internet.spentTotal.label" default="Spent Total" /></span>
+					<span id="spentTotal-label" class="property-label"><g:message code="internet.spentTotal.label" default="Valor Total" /></span>
 					
 						<span class="property-value" aria-labelledby="spentTotal-label"><g:fieldValue bean="${internetInstance}" field="spentTotal"/></span>
 					
@@ -34,31 +34,31 @@
 			
 				<g:if test="${internetInstance?.dueDate}">
 				<li class="fieldcontain">
-					<span id="dueDate-label" class="property-label"><g:message code="internet.dueDate.label" default="Due Date" /></span>
+					<span id="dueDate-label" class="property-label"><g:message code="internet.dueDate.label" default="Data de Vencimento" /></span>
 					
-						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${internetInstance?.dueDate}" /></span>
+						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${internetInstance?.dueDate}" type="date" style='SHORT' /></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${internetInstance?.formPayment}">
 				<li class="fieldcontain">
-					<span id="formPayment-label" class="property-label"><g:message code="internet.formPayment.label" default="Form Payment" /></span>
+					<span id="formPayment-label" class="property-label"><g:message code="internet.formPayment.label" default="Forma de Pagamento" /></span>
 					
 						<span class="property-value" aria-labelledby="formPayment-label"><g:fieldValue bean="${internetInstance}" field="formPayment"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${internetInstance?.reasonExpense}">
+				<g:if test="${internetInstance?.paymentDate}">
 				<li class="fieldcontain">
-					<span id="reasonExpense-label" class="property-label"><g:message code="internet.reasonExpense.label" default="Reason Expense" /></span>
+					<span id="paymentDate-label" class="property-label"><g:message code="internet.paymentDate.label" default="Data de Pagamento" /></span>
 					
-						<span class="property-value" aria-labelledby="reasonExpense-label"><g:fieldValue bean="${internetInstance}" field="reasonExpense"/></span>
+						<span class="property-value" aria-labelledby="paymentDate-label"><g:formatDate date="${internetInstance?.paymentDate}" type="date" style='SHORT'/></span>
 					
 				</li>
 				</g:if>
-			
+					
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

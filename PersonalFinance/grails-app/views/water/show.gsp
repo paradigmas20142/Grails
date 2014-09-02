@@ -25,7 +25,7 @@
 			
 				<g:if test="${waterInstance?.spentTotal}">
 				<li class="fieldcontain">
-					<span id="spentTotal-label" class="property-label"><g:message code="water.spentTotal.label" default="Spent Total" /></span>
+					<span id="spentTotal-label" class="property-label"><g:message code="water.spentTotal.label" default="Valor Total" /></span>
 					
 						<span class="property-value" aria-labelledby="spentTotal-label"><g:fieldValue bean="${waterInstance}" field="spentTotal"/></span>
 					
@@ -34,27 +34,27 @@
 			
 				<g:if test="${waterInstance?.dueDate}">
 				<li class="fieldcontain">
-					<span id="dueDate-label" class="property-label"><g:message code="water.dueDate.label" default="Due Date" /></span>
+					<span id="dueDate-label" class="property-label"><g:message code="water.dueDate.label" default="Data de Vencimento" /></span>
 					
-						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${waterInstance?.dueDate}" /></span>
+						<span class="property-value" aria-labelledby="dueDate-label"><g:formatDate date="${waterInstance?.dueDate}" type="date" style="SHORT"/></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${waterInstance?.formPayment}">
 				<li class="fieldcontain">
-					<span id="formPayment-label" class="property-label"><g:message code="water.formPayment.label" default="Form Payment" /></span>
+					<span id="formPayment-label" class="property-label"><g:message code="water.formPayment.label" default="Forma de Pagamento" /></span>
 					
 						<span class="property-value" aria-labelledby="formPayment-label"><g:fieldValue bean="${waterInstance}" field="formPayment"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${waterInstance?.reasonExpense}">
+				<g:if test="${waterInstance?.paymentDate}">
 				<li class="fieldcontain">
-					<span id="reasonExpense-label" class="property-label"><g:message code="water.reasonExpense.label" default="Reason Expense" /></span>
+					<span id="paymentDate-label" class="property-label"><g:message code="water.paymentDate.label" default="Data de Pagamento" /></span>
 					
-						<span class="property-value" aria-labelledby="reasonExpense-label"><g:fieldValue bean="${waterInstance}" field="reasonExpense"/></span>
+						<span class="property-value" aria-labelledby="paymentDate-label"><g:formatDate date="${waterInstance?.paymentDate}" type="date" style="SHORT"/></span>
 					
 				</li>
 				</g:if>
