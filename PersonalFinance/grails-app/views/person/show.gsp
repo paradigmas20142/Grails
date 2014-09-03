@@ -1,5 +1,5 @@
 
-<%@ page import="personalfinance.Person" %>
+<%@ page import="personalfinance.user.Person" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,56 +23,65 @@
 			</g:if>
 			<ol class="property-list person">
 			
-				<g:if test="${personInstance?.user}">
+				<g:if test="${personInstance?.username}">
 				<li class="fieldcontain">
-					<span id="user-label" class="property-label"><g:message code="person.user.label" default="User" /></span>
+					<span id="username-label" class="property-label"><g:message code="person.username.label" default="Username" /></span>
 					
-						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${personInstance?.user?.id}">${personInstance?.user?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${personInstance}" field="username"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.adress}">
+				<g:if test="${personInstance?.password}">
 				<li class="fieldcontain">
-					<span id="adress-label" class="property-label"><g:message code="person.adress.label" default="Adress" /></span>
+					<span id="password-label" class="property-label"><g:message code="person.password.label" default="Password" /></span>
 					
-						<span class="property-value" aria-labelledby="adress-label"><g:fieldValue bean="${personInstance}" field="adress"/></span>
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${personInstance}" field="password"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.financeSit}">
+				<g:if test="${personInstance?.accountExpired}">
 				<li class="fieldcontain">
-					<span id="financeSit-label" class="property-label"><g:message code="person.financeSit.label" default="Finance Sit" /></span>
+					<span id="accountExpired-label" class="property-label"><g:message code="person.accountExpired.label" default="Account Expired" /></span>
 					
-						<span class="property-value" aria-labelledby="financeSit-label"><g:fieldValue bean="${personInstance}" field="financeSit"/></span>
+						<span class="property-value" aria-labelledby="accountExpired-label"><g:formatBoolean boolean="${personInstance?.accountExpired}" /></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.name}">
+				<g:if test="${personInstance?.accountLocked}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="person.name.label" default="Name" /></span>
+					<span id="accountLocked-label" class="property-label"><g:message code="person.accountLocked.label" default="Account Locked" /></span>
 					
-						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${personInstance}" field="name"/></span>
+						<span class="property-value" aria-labelledby="accountLocked-label"><g:formatBoolean boolean="${personInstance?.accountLocked}" /></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.number}">
+				<g:if test="${personInstance?.enabled}">
 				<li class="fieldcontain">
-					<span id="number-label" class="property-label"><g:message code="person.number.label" default="Number" /></span>
+					<span id="enabled-label" class="property-label"><g:message code="person.enabled.label" default="Enabled" /></span>
 					
-						<span class="property-value" aria-labelledby="number-label"><g:fieldValue bean="${personInstance}" field="number"/></span>
+						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${personInstance?.enabled}" /></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.salary}">
+				<g:if test="${personInstance?.passwordExpired}">
 				<li class="fieldcontain">
-					<span id="salary-label" class="property-label"><g:message code="person.salary.label" default="Salary" /></span>
+					<span id="passwordExpired-label" class="property-label"><g:message code="person.passwordExpired.label" default="Password Expired" /></span>
 					
-						<span class="property-value" aria-labelledby="salary-label"><g:fieldValue bean="${personInstance}" field="salary"/></span>
+						<span class="property-value" aria-labelledby="passwordExpired-label"><g:formatBoolean boolean="${personInstance?.passwordExpired}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.realName}">
+				<li class="fieldcontain">
+					<span id="realName-label" class="property-label"><g:message code="person.realName.label" default="Real Name" /></span>
+					
+						<span class="property-value" aria-labelledby="realName-label"><g:fieldValue bean="${personInstance}" field="realName"/></span>
 					
 				</li>
 				</g:if>

@@ -1,4 +1,4 @@
-<%@ page import="personalfinance.Person" %>
+<%@ page import="personalfinance.user.Person" %>
 <!DOCTYPE html>
 <html>
 	<head>

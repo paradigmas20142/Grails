@@ -1,5 +1,5 @@
 
-<%@ page import="personalfinance.Person" %>
+<%@ page import="personalfinance.user.Person" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,17 +24,17 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="person.user.label" default="User" /></th>
+						<g:sortableColumn property="username" title="${message(code: 'person.username.label', default: 'Username')}" />
 					
-						<g:sortableColumn property="adress" title="${message(code: 'person.adress.label', default: 'Adress')}" />
+						<g:sortableColumn property="password" title="${message(code: 'person.password.label', default: 'Password')}" />
 					
-						<g:sortableColumn property="financeSit" title="${message(code: 'person.financeSit.label', default: 'Finance Sit')}" />
+						<g:sortableColumn property="accountExpired" title="${message(code: 'person.accountExpired.label', default: 'Account Expired')}" />
 					
-						<g:sortableColumn property="name" title="${message(code: 'person.name.label', default: 'Name')}" />
+						<g:sortableColumn property="accountLocked" title="${message(code: 'person.accountLocked.label', default: 'Account Locked')}" />
 					
-						<g:sortableColumn property="number" title="${message(code: 'person.number.label', default: 'Number')}" />
+						<g:sortableColumn property="enabled" title="${message(code: 'person.enabled.label', default: 'Enabled')}" />
 					
-						<g:sortableColumn property="salary" title="${message(code: 'person.salary.label', default: 'Salary')}" />
+						<g:sortableColumn property="passwordExpired" title="${message(code: 'person.passwordExpired.label', default: 'Password Expired')}" />
 					
 					</tr>
 				</thead>
@@ -42,17 +42,17 @@
 				<g:each in="${personInstanceList}" status="i" var="personInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "user")}</g:link></td>
+						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "username")}</g:link></td>
 					
-						<td>${fieldValue(bean: personInstance, field: "adress")}</td>
+						<td>${fieldValue(bean: personInstance, field: "password")}</td>
 					
-						<td>${fieldValue(bean: personInstance, field: "financeSit")}</td>
+						<td><g:formatBoolean boolean="${personInstance.accountExpired}" /></td>
 					
-						<td>${fieldValue(bean: personInstance, field: "name")}</td>
+						<td><g:formatBoolean boolean="${personInstance.accountLocked}" /></td>
 					
-						<td>${fieldValue(bean: personInstance, field: "number")}</td>
+						<td><g:formatBoolean boolean="${personInstance.enabled}" /></td>
 					
-						<td>${fieldValue(bean: personInstance, field: "salary")}</td>
+						<td><g:formatBoolean boolean="${personInstance.passwordExpired}" /></td>
 					
 					</tr>
 				</g:each>
