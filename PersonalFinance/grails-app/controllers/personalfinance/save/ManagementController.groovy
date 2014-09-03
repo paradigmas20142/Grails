@@ -11,8 +11,10 @@ class ManagementController {
     }
 
     def list(Integer max) {
+        def education = new Education()
+        def helth = new Helth()
         params.max = Math.min(max ?: 10, 100)
-        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),education: new Education()]
+        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),education: education,helth: helth]
     }
 
     def create() {

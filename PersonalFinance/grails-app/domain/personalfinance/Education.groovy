@@ -7,17 +7,11 @@ class Education extends Category {
     Integer spentTuition
     Book book
 
-
-def calcSpentTotal () {
-        def list_object = Education.getAll()
-        def calcSpentTotal = 0
-        list_object.each {value ->
-          calcSpentTotal += value.spentTotal
-       }
-        return calcSpentTotal
+    
+   def calcSpentTotal(){
+    super.calcSpentTotal(Education)
    }
 
-    
     static constraints = {
       spentTuition nullable: true
       book nullable: true

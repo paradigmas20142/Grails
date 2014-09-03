@@ -39,6 +39,12 @@
 			</div>
       <g:set var = "spentEducation" value = "${education.calcSpentTotal()}" />
       <g:message code = "default.list.label" args = "[spentEducation]" />
+      <g:set var = "spentHelth" value = "${helth.calcSpentTotal()}" />
+      <g:message code = "default.list.label" args = "[spentHelth]" />
+      <g:set var = "spentEducation" value = "${education.calcSpentTotal()}" />
+      <g:message code = "default.list.label" args = "[spentEducation]" />
+      <g:set var = "spentHelth" value = "${helth.calcSpentTotal()}" />
+      <g:message code = "default.list.label" args = "[spentHelth]" />
 		</div>
 	</body>
 </html>
