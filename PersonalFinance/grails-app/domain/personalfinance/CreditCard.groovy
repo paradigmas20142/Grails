@@ -6,10 +6,9 @@ class CreditCard {
     Date cardPay
     String cardCompany
 
-    static belongsTo = [helth:Helth, sport:Sport]
+    static belongsTo = [helth:Helth]
 
     static constraints = {
     	helth nullable: true
-    	sport nullable: true
     }
 }

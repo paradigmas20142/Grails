@@ -1,6 +1,6 @@
 package personalfinance
 
-abstract class Leisure extends Category {
+abstract class Leisure extends personalfinance.Category {
 
 	Date data
 	String place
