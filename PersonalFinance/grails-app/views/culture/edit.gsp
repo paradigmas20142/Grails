@@ -1,13 +1,13 @@
-<%@ page import="personalfinance.Playhouse" %>
+<%@ page import="personalfinance.Culture" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'playhouse.label', default: 'Playhouse')}" />
+		<g:set var="entityName" value="${message(code: 'culture.label', default: 'Culture')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#edit-playhouse" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<a href="#edit-culture" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
@@ -15,21 +15,21 @@
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
-		<div id="edit-playhouse" class="content scaffold-edit" role="main">
+		<div id="edit-culture" class="content scaffold-edit" role="main">
 			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<g:hasErrors bean="${playhouseInstance}">
+			<g:hasErrors bean="${cultureInstance}">
 			<ul class="errors" role="alert">
-				<g:eachError bean="${playhouseInstance}" var="error">
+				<g:eachError bean="${cultureInstance}" var="error">
 				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
 			<g:form method="post" >
-				<g:hiddenField name="id" value="${playhouseInstance?.id}" />
-				<g:hiddenField name="version" value="${playhouseInstance?.version}" />
+				<g:hiddenField name="id" value="${cultureInstance?.id}" />
+				<g:hiddenField name="version" value="${cultureInstance?.version}" />
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>
