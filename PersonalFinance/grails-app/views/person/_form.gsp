@@ -1,50 +1,58 @@
-<%@ page import="personalfinance.Person" %>
+<%@ page import="personalfinance.user.Person" %>
 
 
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'user', 'error')} ">
-	<label for="user">
-		<g:message code="person.user.label" default="User" />
-		
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'username', 'error')} required">
+	<label for="username">
+		<g:message code="person.username.label" default="Username" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="user" name="user.id" from="${personalfinance.User.list()}" optionKey="id" value="${personInstance?.user?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:textField name="username" required="" value="${personInstance?.username}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'adress', 'error')} ">
-	<label for="adress">
-		<g:message code="person.adress.label" default="Adress" />
-		
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="person.password.label" default="Password" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="adress" value="${personInstance?.adress}"/>
+	<g:passwordField name="password" required="" value="${personInstance?.password}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'financeSit', 'error')} ">
-	<label for="financeSit">
-		<g:message code="person.financeSit.label" default="Finance Sit" />
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'address', 'error')} ">
+	<label for="address">
+		<g:message code="person.address.label" default="Endereço" />
 		
 	</label>
-	<g:textField name="financeSit" value="${personInstance?.financeSit}"/>
+	<g:textField name="address" value="${personInstance?.address}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'financialSituation', 'error')} ">
+	<label for="financialSituation">
+		<g:message code="person.financialSituation.label" default="Situação Financeira" />
+		
+	</label>
+	<g:textField name="financialSituation" value="${personInstance?.financialSituation}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'name', 'error')} ">
 	<label for="name">
-		<g:message code="person.name.label" default="Name" />
+		<g:message code="person.name.label" default="Nome" />
 		
 	</label>
 	<g:textField name="name" value="${personInstance?.name}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'number', 'error')} required">
-	<label for="number">
-		<g:message code="person.number.label" default="Number" />
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'phone', 'error')} required">
+	<label for="phone">
+		<g:message code="person.phone.label" default="Telefone" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="number" type="number" value="${personInstance.number}" required=""/>
+	<g:field name="phone" type="number" value="${personInstance.phone}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'salary', 'error')} required">
 	<label for="salary">
-		<g:message code="person.salary.label" default="Salary" />
+		<g:message code="person.salary.label" default="Salário" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:field name="salary" type="number" value="${personInstance.salary}" required=""/>

@@ -32,11 +32,20 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${sportInstance?.creditcard}">
+				<li class="fieldcontain">
+					<span id="creditcard-label" class="property-label"><g:message code="sport.creditcard.label" default="Cartão de Crédito" /></span>
+					
+						<span class="property-value" aria-labelledby="creditcard-label"><g:link controller="creditCard" action="show" id="${sportInstance?.creditcard?.id}">${sportInstance?.creditcard?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${sportInstance?.data}">
 				<li class="fieldcontain">
 					<span id="data-label" class="property-label"><g:message code="sport.data.label" default="Data" /></span>
 					
-						<span class="property-value" aria-labelledby="data-label"><g:formatDate date="${sportInstance?.data}" type="date" style="SHORT" /></span>
+						<span class="property-value" aria-labelledby="data-label"><g:formatDate date="${sportInstance?.data}" /></span>
 					
 				</li>
 				</g:if>

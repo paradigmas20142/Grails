@@ -24,13 +24,15 @@
 				<thead>
 					<tr>
 					
+						<th><g:message code="creditCard.helth.label" default="Helth" /></th>
+					
+						<th><g:message code="creditCard.sport.label" default="Sport" /></th>
+					
 						<g:sortableColumn property="cardCompany" title="${message(code: 'creditCard.cardCompany.label', default: 'Card Company')}" />
 					
 						<g:sortableColumn property="cardLimit" title="${message(code: 'creditCard.cardLimit.label', default: 'Card Limit')}" />
 					
 						<g:sortableColumn property="cardPay" title="${message(code: 'creditCard.cardPay.label', default: 'Card Pay')}" />
-					
-						<th><g:message code="creditCard.helth.label" default="Helth" /></th>
 					
 					</tr>
 				</thead>
@@ -38,13 +40,15 @@
 				<g:each in="${creditCardInstanceList}" status="i" var="creditCardInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${creditCardInstance.id}">${fieldValue(bean: creditCardInstance, field: "cardCompany")}</g:link></td>
+						<td><g:link action="show" id="${creditCardInstance.id}">${fieldValue(bean: creditCardInstance, field: "helth")}</g:link></td>
+					
+						<td>${fieldValue(bean: creditCardInstance, field: "sport")}</td>
+					
+						<td>${fieldValue(bean: creditCardInstance, field: "cardCompany")}</td>
 					
 						<td>${fieldValue(bean: creditCardInstance, field: "cardLimit")}</td>
 					
 						<td><g:formatDate date="${creditCardInstance.cardPay}" /></td>
-					
-						<td>${fieldValue(bean: creditCardInstance, field: "helth")}</td>
 					
 					</tr>
 				</g:each>

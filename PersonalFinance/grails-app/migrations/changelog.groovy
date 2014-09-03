@@ -1,124 +1,396 @@
 databaseChangeLog = {
 
-	changeSet(author: "carolina (generated)", id: "1409541797529-1") {
-		createTable(tableName: "CREDIT_CARD") {
-			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
-				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_6")
+	changeSet(author: "carolina (generated)", id: "1409690852722-1") {
+		createTable(tableName: "cabletv") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
 			}
 
-			column(name: "VERSION", type: "BIGINT") {
+			column(name: "version", type: "BIGINT") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "CARD_COMPANY", type: "VARCHAR(255)") {
+			column(name: "due_date", type: "DATETIME") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "CARD_LIMIT", type: "INT") {
+			column(name: "form_payment", type: "VARCHAR(255)") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "CARD_PAY", type: "TIMESTAMP") {
+			column(name: "payment_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-2") {
+		createTable(tableName: "clothing") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "data", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "form_payment", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "place", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-3") {
+		createTable(tableName: "credit_card") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "card_company", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "card_limit", type: "INT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "card_pay", type: "DATETIME") {
 				constraints(nullable: "false")
 			}
 		}
 	}
 
-	changeSet(author: "carolina (generated)", id: "1409541797529-2") {
-		createTable(tableName: "HELTH") {
-			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
-				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_4")
+	changeSet(author: "carolina (generated)", id: "1409690852722-4") {
+		createTable(tableName: "helth") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
 			}
 
-			column(name: "VERSION", type: "BIGINT") {
+			column(name: "version", type: "BIGINT") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "CREDIT_CARD_ID", type: "BIGINT")
+			column(name: "credit_card_id", type: "BIGINT")
 
-			column(name: "FORM_PAYMENT", type: "VARCHAR(255)") {
+			column(name: "form_payment", type: "VARCHAR(255)") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "HOSPITAL_TYPE", type: "VARCHAR(255)") {
+			column(name: "hospital_type", type: "VARCHAR(255)") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "REASON_EXPENSE", type: "VARCHAR(255)") {
+			column(name: "reason_expense", type: "VARCHAR(255)") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "SPENT_ON_CONSULT", type: "INT") {
+			column(name: "spent_on_consult", type: "INT") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "SPENT_ON_MEDICINE", type: "INT")
+			column(name: "spent_on_medicine", type: "INT")
 
-			column(name: "SPENT_TOTAL", type: "INT")
+			column(name: "spent_total", type: "INT")
 		}
 	}
 
-	changeSet(author: "carolina (generated)", id: "1409541797529-3") {
-		createTable(tableName: "PERSON") {
-			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
-				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_8")
+	changeSet(author: "carolina (generated)", id: "1409690852722-5") {
+		createTable(tableName: "internet") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
 			}
 
-			column(name: "VERSION", type: "BIGINT") {
+			column(name: "version", type: "BIGINT") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "ADRESS", type: "VARCHAR(255)") {
+			column(name: "due_date", type: "DATETIME") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "FINANCE_SIT", type: "VARCHAR(255)") {
+			column(name: "form_payment", type: "VARCHAR(255)") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "NAME", type: "VARCHAR(255)") {
+			column(name: "payment_date", type: "DATETIME") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "NUMBER", type: "INT") {
+			column(name: "reason_expense", type: "VARCHAR(255)") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "SALARY", type: "INT") {
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-6") {
+		createTable(tableName: "light") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "due_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "form_payment", type: "VARCHAR(255)")
+
+			column(name: "payment_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)")
+
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-7") {
+		createTable(tableName: "mobile_phone") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "due_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "form_payment", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "payment_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-8") {
+		createTable(tableName: "person") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "adress", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "finance_sit", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "name", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "number", type: "INT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "salary", type: "INT") {
 				constraints(nullable: "false")
 			}
 		}
 	}
 
-	changeSet(author: "carolina (generated)", id: "1409541797529-4") {
-		createTable(tableName: "USER") {
-			column(autoIncrement: "true", name: "ID", type: "BIGINT") {
-				constraints(nullable: "false", primaryKey: "true", primaryKeyName: "CONSTRAINT_2")
+	changeSet(author: "carolina (generated)", id: "1409690852722-9") {
+		createTable(tableName: "phone") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
 			}
 
-			column(name: "VERSION", type: "BIGINT") {
+			column(name: "version", type: "BIGINT") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "LOGIN", type: "VARCHAR(255)") {
+			column(name: "due_date", type: "DATETIME") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "PASSWORD", type: "VARCHAR(255)") {
+			column(name: "form_payment", type: "VARCHAR(255)") {
 				constraints(nullable: "false")
 			}
 
-			column(name: "PERSON_ID", type: "BIGINT") {
+			column(name: "payment_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-10") {
+		createTable(tableName: "playhouse") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "data", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "form_payment", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "place", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-11") {
+		createTable(tableName: "sport") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "creditcard_id", type: "BIGINT")
+
+			column(name: "data", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "form_payment", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "place", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "spent_total", type: "INT")
+		}
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-12") {
+		createTable(tableName: "user") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "login", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "password", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "person_id", type: "BIGINT") {
 				constraints(nullable: "false")
 			}
 		}
 	}
 
-	changeSet(author: "carolina (generated)", id: "1409541797529-5") {
-		addForeignKeyConstraint(baseColumnNames: "CREDIT_CARD_ID", baseTableName: "HELTH", baseTableSchemaName: "PUBLIC", constraintName: "FK5E919C3632F5001", deferrable: "false", initiallyDeferred: "false", onDelete: "RESTRICT", onUpdate: "RESTRICT", referencedColumnNames: "ID", referencedTableName: "CREDIT_CARD", referencedTableSchemaName: "PUBLIC", referencesUniqueColumn: "false")
+	changeSet(author: "carolina (generated)", id: "1409690852722-13") {
+		createTable(tableName: "water") {
+			column(autoIncrement: "true", name: "id", type: "BIGINT") {
+				constraints(nullable: "false", primaryKey: "true")
+			}
+
+			column(name: "version", type: "BIGINT") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "due_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "form_payment", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "payment_date", type: "DATETIME") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "reason_expense", type: "VARCHAR(255)") {
+				constraints(nullable: "false")
+			}
+
+			column(name: "spent_total", type: "INT")
+		}
 	}
 
-	changeSet(author: "carolina (generated)", id: "1409541797529-6") {
-		addForeignKeyConstraint(baseColumnNames: "PERSON_ID", baseTableName: "USER", baseTableSchemaName: "PUBLIC", constraintName: "FK36EBCBB901048E", deferrable: "false", initiallyDeferred: "false", onDelete: "RESTRICT", onUpdate: "RESTRICT", referencedColumnNames: "ID", referencedTableName: "PERSON", referencedTableSchemaName: "PUBLIC", referencesUniqueColumn: "false")
+	changeSet(author: "carolina (generated)", id: "1409690852722-14") {
+		addForeignKeyConstraint(baseColumnNames: "credit_card_id", baseTableName: "helth", baseTableSchemaName: "PersonalFinance_II", constraintName: "FK5E919C3632F5001", deferrable: "false", initiallyDeferred: "false", onDelete: "NO ACTION", onUpdate: "NO ACTION", referencedColumnNames: "id", referencedTableName: "credit_card", referencedTableSchemaName: "PersonalFinance_II", referencesUniqueColumn: "false")
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-15") {
+		addForeignKeyConstraint(baseColumnNames: "creditcard_id", baseTableName: "sport", baseTableSchemaName: "PersonalFinance_II", constraintName: "FK68927746ABFC22E", deferrable: "false", initiallyDeferred: "false", onDelete: "NO ACTION", onUpdate: "NO ACTION", referencedColumnNames: "id", referencedTableName: "credit_card", referencedTableSchemaName: "PersonalFinance_II", referencesUniqueColumn: "false")
+	}
+
+	changeSet(author: "carolina (generated)", id: "1409690852722-16") {
+		addForeignKeyConstraint(baseColumnNames: "person_id", baseTableName: "user", baseTableSchemaName: "PersonalFinance_II", constraintName: "FK36EBCBB901048E", deferrable: "false", initiallyDeferred: "false", onDelete: "NO ACTION", onUpdate: "NO ACTION", referencedColumnNames: "id", referencedTableName: "person", referencedTableSchemaName: "PersonalFinance_II", referencesUniqueColumn: "false")
 	}
 }

@@ -1,5 +1,5 @@
 
-<%@ page import="personalfinance.Person" %>
+<%@ page import="personalfinance.user.Person" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,54 +23,54 @@
 			</g:if>
 			<ol class="property-list person">
 			
-				<g:if test="${personInstance?.user}">
+				<g:if test="${personInstance?.username}">
 				<li class="fieldcontain">
-					<span id="user-label" class="property-label"><g:message code="person.user.label" default="User" /></span>
+					<span id="username-label" class="property-label"><g:message code="person.username.label" default="Username" /></span>
 					
-						<span class="property-value" aria-labelledby="user-label"><g:link controller="user" action="show" id="${personInstance?.user?.id}">${personInstance?.user?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${personInstance}" field="username"/></span>
+					
+				</li>
+				</g:if>			
+							
+				<g:if test="${personInstance?.address}">
+				<li class="fieldcontain">
+					<span id="address-label" class="property-label"><g:message code="person.address.label" default="Endereço" /></span>
+					
+						<span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${personInstance}" field="address"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.adress}">
+				<g:if test="${personInstance?.financialSituation}">
 				<li class="fieldcontain">
-					<span id="adress-label" class="property-label"><g:message code="person.adress.label" default="Adress" /></span>
+					<span id="financialSituation-label" class="property-label"><g:message code="person.financialSituation.label" default="Situação Financeira" /></span>
 					
-						<span class="property-value" aria-labelledby="adress-label"><g:fieldValue bean="${personInstance}" field="adress"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${personInstance?.financeSit}">
-				<li class="fieldcontain">
-					<span id="financeSit-label" class="property-label"><g:message code="person.financeSit.label" default="Finance Sit" /></span>
-					
-						<span class="property-value" aria-labelledby="financeSit-label"><g:fieldValue bean="${personInstance}" field="financeSit"/></span>
+						<span class="property-value" aria-labelledby="financialSituation-label"><g:fieldValue bean="${personInstance}" field="financialSituation"/></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${personInstance?.name}">
 				<li class="fieldcontain">
-					<span id="name-label" class="property-label"><g:message code="person.name.label" default="Name" /></span>
+					<span id="name-label" class="property-label"><g:message code="person.name.label" default="Nome" /></span>
 					
 						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${personInstance}" field="name"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.number}">
+				<g:if test="${personInstance?.phone}">
 				<li class="fieldcontain">
-					<span id="number-label" class="property-label"><g:message code="person.number.label" default="Number" /></span>
+					<span id="phone-label" class="property-label"><g:message code="person.phone.label" default="Telefone" /></span>
 					
-						<span class="property-value" aria-labelledby="number-label"><g:fieldValue bean="${personInstance}" field="number"/></span>
+						<span class="property-value" aria-labelledby="phone-label"><g:fieldValue bean="${personInstance}" field="phone"/></span>
 					
 				</li>
 				</g:if>
 			
 				<g:if test="${personInstance?.salary}">
 				<li class="fieldcontain">
-					<span id="salary-label" class="property-label"><g:message code="person.salary.label" default="Salary" /></span>
+					<span id="salary-label" class="property-label"><g:message code="person.salary.label" default="Salário" /></span>
 					
 						<span class="property-value" aria-labelledby="salary-label"><g:fieldValue bean="${personInstance}" field="salary"/></span>
 					

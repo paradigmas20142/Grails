@@ -1,4 +1,4 @@
-package personalfinance
+package personalfinance.user
 
 import org.springframework.dao.DataIntegrityViolationException
 
