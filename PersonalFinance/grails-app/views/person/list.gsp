@@ -26,8 +26,6 @@
 					
 						<g:sortableColumn property="username" title="${message(code: 'person.username.label', default: 'Username')}" />
 					
-						<g:sortableColumn property="password" title="${message(code: 'person.password.label', default: 'Password')}" />
-					
 						<g:sortableColumn property="address" title="${message(code: 'person.address.label', default: 'Endereço')}" />
 					
 						<g:sortableColumn property="financialSituation" title="${message(code: 'person.financialSituation.label', default: 'Situação Financeira')}" />
@@ -43,9 +41,7 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "username")}</g:link></td>
-					
-						<td>${fieldValue(bean: personInstance, field: "password")}</td>
-					
+										
 						<td>${fieldValue(bean: personInstance, field: "address")}</td>
 					
 						<td>${fieldValue(bean: personInstance, field: "financialSituation")}</td>

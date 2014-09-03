@@ -30,17 +30,8 @@
 						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${personInstance}" field="username"/></span>
 					
 				</li>
-				</g:if>
-			
-				<g:if test="${personInstance?.password}">
-				<li class="fieldcontain">
-					<span id="password-label" class="property-label"><g:message code="person.password.label" default="Password" /></span>
-					
-						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${personInstance}" field="password"/></span>
-					
-				</li>
-				</g:if>
-			
+				</g:if>			
+							
 				<g:if test="${personInstance?.address}">
 				<li class="fieldcontain">
 					<span id="address-label" class="property-label"><g:message code="person.address.label" default="Endereço" /></span>
