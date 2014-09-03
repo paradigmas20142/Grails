@@ -41,47 +41,47 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.accountExpired}">
+				<g:if test="${personInstance?.address}">
 				<li class="fieldcontain">
-					<span id="accountExpired-label" class="property-label"><g:message code="person.accountExpired.label" default="Account Expired" /></span>
+					<span id="address-label" class="property-label"><g:message code="person.address.label" default="Endereço" /></span>
 					
-						<span class="property-value" aria-labelledby="accountExpired-label"><g:formatBoolean boolean="${personInstance?.accountExpired}" /></span>
+						<span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${personInstance}" field="address"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.accountLocked}">
+				<g:if test="${personInstance?.financialSituation}">
 				<li class="fieldcontain">
-					<span id="accountLocked-label" class="property-label"><g:message code="person.accountLocked.label" default="Account Locked" /></span>
+					<span id="financialSituation-label" class="property-label"><g:message code="person.financialSituation.label" default="Situação Financeira" /></span>
 					
-						<span class="property-value" aria-labelledby="accountLocked-label"><g:formatBoolean boolean="${personInstance?.accountLocked}" /></span>
+						<span class="property-value" aria-labelledby="financialSituation-label"><g:fieldValue bean="${personInstance}" field="financialSituation"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.enabled}">
+				<g:if test="${personInstance?.name}">
 				<li class="fieldcontain">
-					<span id="enabled-label" class="property-label"><g:message code="person.enabled.label" default="Enabled" /></span>
+					<span id="name-label" class="property-label"><g:message code="person.name.label" default="Nome" /></span>
 					
-						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${personInstance?.enabled}" /></span>
+						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${personInstance}" field="name"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.passwordExpired}">
+				<g:if test="${personInstance?.phone}">
 				<li class="fieldcontain">
-					<span id="passwordExpired-label" class="property-label"><g:message code="person.passwordExpired.label" default="Password Expired" /></span>
+					<span id="phone-label" class="property-label"><g:message code="person.phone.label" default="Telefone" /></span>
 					
-						<span class="property-value" aria-labelledby="passwordExpired-label"><g:formatBoolean boolean="${personInstance?.passwordExpired}" /></span>
+						<span class="property-value" aria-labelledby="phone-label"><g:fieldValue bean="${personInstance}" field="phone"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.realName}">
+				<g:if test="${personInstance?.salary}">
 				<li class="fieldcontain">
-					<span id="realName-label" class="property-label"><g:message code="person.realName.label" default="Real Name" /></span>
+					<span id="salary-label" class="property-label"><g:message code="person.salary.label" default="Salário" /></span>
 					
-						<span class="property-value" aria-labelledby="realName-label"><g:fieldValue bean="${personInstance}" field="realName"/></span>
+						<span class="property-value" aria-labelledby="salary-label"><g:fieldValue bean="${personInstance}" field="salary"/></span>
 					
 				</li>
 				</g:if>

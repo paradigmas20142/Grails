@@ -15,8 +15,8 @@ class BootStrap {
 
     	String password = 'password'
 
-    	[carol: 'Carolina Ramalho'].each {userName, realName ->
-    		def user = new Person(userName: userName, realName:realName, password: password, enable: true).save()
+    	[carol: 'Carolina Ramalho'].each {userName, name ->
+    		def user = new Person(userName: userName, name:name, password:password, enable: true).save()
     		PersonAuthority.create user, userRole, true
     	}
     }
