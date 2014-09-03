@@ -8,6 +8,9 @@ class Helth extends Category {
     CreditCard creditCard
 
 
+   def calcSpentTotal(){
+    super.calcSpentTotal(Helth)
+   }
 
     static constraints = {
       creditCard nullable: true
