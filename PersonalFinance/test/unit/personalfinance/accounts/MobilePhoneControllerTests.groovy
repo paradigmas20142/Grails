@@ -5,14 +5,19 @@ package personalfinance.accounts
 import org.junit.*
 import grails.test.mixin.*
 
+/**
+ * MobilePhoneControllerTests
+ * A unit test class is used to test individual methods or blocks of code without considering the surrounding infrastructure
+ */
 @TestFor(MobilePhoneController)
 @Mock(MobilePhone)
 class MobilePhoneControllerTests {
 
+
     def populateValidParams(params) {
-        assert params != null
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
+      assert params != null
+      // TODO: Populate valid properties like...
+      //params["name"] = 'someValidName'
     }
 
     void testIndex() {
@@ -29,9 +34,9 @@ class MobilePhoneControllerTests {
     }
 
     void testCreate() {
-        def model = controller.create()
+       def model = controller.create()
 
-        assert model.mobilePhoneInstance != null
+       assert model.mobilePhoneInstance != null
     }
 
     void testSave() {
@@ -56,6 +61,7 @@ class MobilePhoneControllerTests {
         assert flash.message != null
         assert response.redirectedUrl == '/mobilePhone/list'
 
+
         populateValidParams(params)
         def mobilePhone = new MobilePhone(params)
 
@@ -73,6 +79,7 @@ class MobilePhoneControllerTests {
 
         assert flash.message != null
         assert response.redirectedUrl == '/mobilePhone/list'
+
 
         populateValidParams(params)
         def mobilePhone = new MobilePhone(params)
@@ -93,6 +100,7 @@ class MobilePhoneControllerTests {
         assert response.redirectedUrl == '/mobilePhone/list'
 
         response.reset()
+
 
         populateValidParams(params)
         def mobilePhone = new MobilePhone(params)
