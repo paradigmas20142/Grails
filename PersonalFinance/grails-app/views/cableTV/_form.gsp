@@ -2,43 +2,43 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'spentTotal', 'error')} ">
-	<label for="spentTotal">
-		<g:message code="cableTV.spentTotal.label" default="Valor Total" />
-		
-	</label>
-	<g:field name="spentTotal" type="number" value="${cableTVInstance.spentTotal}"/>
-</div>
+			<div class="control-group fieldcontain ${hasErrors(bean: cableTVInstance, field: 'spentTotal', 'error')} ">
+				<label for="spentTotal" class="control-label"><g:message code="cableTV.spentTotal.label" default="Spent Total" /></label>
+				<div class="controls">
+					<g:field type="number" name="spentTotal" value="${cableTVInstance.spentTotal}"/>
+					<span class="help-inline">${hasErrors(bean: cableTVInstance, field: 'spentTotal', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'dueDate', 'error')} required">
-	<label for="dueDate">
-		<g:message code="cableTV.dueDate.label" default="Data de Vencimento" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="dueDate" precision="day"  value="${cableTVInstance?.dueDate}"  />
-</div>
+			<div class="control-group fieldcontain ${hasErrors(bean: cableTVInstance, field: 'dueDate', 'error')} required">
+				<label for="dueDate" class="control-label"><g:message code="cableTV.dueDate.label" default="Due Date" /><span class="required-indicator">*</span></label>
+				<div class="controls">
+					<bs:datePicker name="dueDate" precision="day"  value="${cableTVInstance?.dueDate}"  />
+					<span class="help-inline">${hasErrors(bean: cableTVInstance, field: 'dueDate', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'formPayment', 'error')} ">
-	<label for="formPayment">
-		<g:message code="cableTV.formPayment.label" default="Forma de Pagamento" />
-		
-	</label>
-	<g:textField name="formPayment" value="Dinheiro"/>
-</div>
+			<div class="control-group fieldcontain ${hasErrors(bean: cableTVInstance, field: 'formPayment', 'error')} ">
+				<label for="formPayment" class="control-label"><g:message code="cableTV.formPayment.label" default="Form Payment" /></label>
+				<div class="controls">
+					<g:textField name="formPayment" value="${cableTVInstance?.formPayment}"/>
+					<span class="help-inline">${hasErrors(bean: cableTVInstance, field: 'formPayment', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'paymentDate', 'error')} required">
-	<label for="paymentDate">
-		<g:message code="cableTV.paymentDate.label" default="Data do Pagamento" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:datePicker name="paymentDate" precision="day"  value="${cableTVInstance?.paymentDate}"  />
-</div>
+			<div class="control-group fieldcontain ${hasErrors(bean: cableTVInstance, field: 'paymentDate', 'error')} required">
+				<label for="paymentDate" class="control-label"><g:message code="cableTV.paymentDate.label" default="Payment Date" /><span class="required-indicator">*</span></label>
+				<div class="controls">
+					<bs:datePicker name="paymentDate" precision="day"  value="${cableTVInstance?.paymentDate}"  />
+					<span class="help-inline">${hasErrors(bean: cableTVInstance, field: 'paymentDate', 'error')}</span>
+				</div>
+			</div>
 
-<div class="fieldcontain ${hasErrors(bean: cableTVInstance, field: 'reasonExpense', 'error')} ">
-	<label for="reasonExpense">
-		<g:message code="cableTV.reasonExpense.label" default="Motivo do Gasto" />
-		
-	</label>
-	<g:textField name="reasonExpense" value="TV a cabo"/>
-</div>
+			<div class="control-group fieldcontain ${hasErrors(bean: cableTVInstance, field: 'reasonExpense', 'error')} ">
+				<label for="reasonExpense" class="control-label"><g:message code="cableTV.reasonExpense.label" default="Reason Expense" /></label>
+				<div class="controls">
+					<g:textField name="reasonExpense" value="${cableTVInstance?.reasonExpense}"/>
+					<span class="help-inline">${hasErrors(bean: cableTVInstance, field: 'reasonExpense', 'error')}</span>
+				</div>
+			</div>
 
