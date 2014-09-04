@@ -5,8 +5,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
+	<img src="./images/PersonalFinance1.jpg" width="1920" height="1080" />
 	<g:set var="entityName" value="${message(code: 'education.label', default: 'Education')}" />
-	<title><g:message code="default.list.label" args="[entityName]" /></title>
+	<title><g:message code="List Education" args="[entityName]" /></title>
 </head>
 
 <body>

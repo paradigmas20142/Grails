@@ -1,12 +1,17 @@
 <html>
 
 <head>
-	<title><g:message code="default.welcome.title" args="[meta(name:'app.name')]"/> </title>
+	<title>Personal Finances</title>
 	<meta name="layout" content="kickstart" />
 </head>
 
 <body>
 
+	<br></br>
+	<div class="center">
+		<h1>Control your finances! Register your spending on the categories below and get a graph of your expenses!</h1>
+	</div>
+	<br></br>
 	<section id="info">
 		<div class="row-fluid">
 	    	<div class="span4">
@@ -27,7 +32,7 @@
 			<div class="span4">
 		    	<div class="center">
 					<img class="frontpageImage" src="./images/helth.png" border="none" />
-					<a href="helth/list"><h3>Helth</h3></a> 					
+					<a href="helth/list"><h3>Health</h3></a> 					
 				</div>
 				<p></p>
 			</div>
@@ -72,7 +77,7 @@
 			<div class="span4">
 		    	<div class="center">
 					<img class="frontpageImage" src="./images/mobilePhone.png" border="none" />
-					<a href="mobilePhone/list"><h3>Mobile Phone</h3></a> 					
+					<a href="phone/list"><h3>Mobile Phone</h3></a> 					
 				</div>
 				<p></p>
 			</div>
