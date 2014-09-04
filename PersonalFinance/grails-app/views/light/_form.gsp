@@ -13,7 +13,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: lightInstance, field: 'formPayment', 'error')} ">
 				<label for="formPayment" class="control-label"><g:message code="light.formPayment.label" default="Form Payment" /></label>
 				<div class="controls">
-					<g:textField name="formPayment" value="${lightInstance?.formPayment}"/>
+					<g:textField name="formPayment" value="Money" readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: lightInstance, field: 'formPayment', 'error')}</span>
 				</div>
 			</div>
@@ -21,7 +21,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: lightInstance, field: 'reasonExpense', 'error')} ">
 				<label for="reasonExpense" class="control-label"><g:message code="light.reasonExpense.label" default="Reason Expense" /></label>
 				<div class="controls">
-					<g:textField name="reasonExpense" value="${lightInstance?.reasonExpense}"/>
+					<g:textField name="reasonExpense" value="Account of Light" readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: lightInstance, field: 'reasonExpense', 'error')}</span>
 				</div>
 			</div>

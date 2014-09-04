@@ -21,7 +21,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: cableTVInstance, field: 'formPayment', 'error')} ">
 				<label for="formPayment" class="control-label"><g:message code="cableTV.formPayment.label" default="Form Payment" /></label>
 				<div class="controls">
-					<g:textField name="formPayment" value="${cableTVInstance?.formPayment}"/>
+					<g:textField name="formPayment" value="Money"  readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: cableTVInstance, field: 'formPayment', 'error')}</span>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: cableTVInstance, field: 'reasonExpense', 'error')} ">
 				<label for="reasonExpense" class="control-label"><g:message code="cableTV.reasonExpense.label" default="Reason Expense" /></label>
 				<div class="controls">
-					<g:textField name="reasonExpense" value="${cableTVInstance?.reasonExpense}"/>
+					<g:textField name="reasonExpense" value="Account of Cable Tv"  readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: cableTVInstance, field: 'reasonExpense', 'error')}</span>
 				</div>
 			</div>

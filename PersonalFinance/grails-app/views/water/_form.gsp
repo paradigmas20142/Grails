@@ -21,7 +21,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: waterInstance, field: 'formPayment', 'error')} ">
 				<label for="formPayment" class="control-label"><g:message code="water.formPayment.label" default="Form Payment" /></label>
 				<div class="controls">
-					<g:textField name="formPayment" value="${waterInstance?.formPayment}"/>
+					<g:textField name="formPayment" value="Money" readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: waterInstance, field: 'formPayment', 'error')}</span>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: waterInstance, field: 'reasonExpense', 'error')} ">
 				<label for="reasonExpense" class="control-label"><g:message code="water.reasonExpense.label" default="Reason Expense" /></label>
 				<div class="controls">
-					<g:textField name="reasonExpense" value="${waterInstance?.reasonExpense}"/>
+					<g:textField name="reasonExpense" value="Account of water" readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: waterInstance, field: 'reasonExpense', 'error')}</span>
 				</div>
 			</div>

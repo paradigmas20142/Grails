@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'creditCard.label', default: 'CreditCard')}" />
-	<title><g:message code="default.edit.label" args="[entityName]" /></title>
+	<title>Edit Credit Card</title>
 </head>
 
 <body>

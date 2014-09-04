@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'cableTV.label', default: 'CableTV')}" />
-	<title><g:message code="default.edit.label" args="[entityName]" /></title>
+	<title>Edit Cable TV</title>
 </head>
 
 <body>

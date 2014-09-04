@@ -21,7 +21,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: internetInstance, field: 'formPayment', 'error')} ">
 				<label for="formPayment" class="control-label"><g:message code="internet.formPayment.label" default="Form Payment" /></label>
 				<div class="controls">
-					<g:textField name="formPayment" value="${internetInstance?.formPayment}"/>
+					<g:textField name="formPayment" value="Money" readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: internetInstance, field: 'formPayment', 'error')}</span>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 			<div class="control-group fieldcontain ${hasErrors(bean: internetInstance, field: 'reasonExpense', 'error')} ">
 				<label for="reasonExpense" class="control-label"><g:message code="internet.reasonExpense.label" default="Reason Expense" /></label>
 				<div class="controls">
-					<g:textField name="reasonExpense" value="${internetInstance?.reasonExpense}"/>
+					<g:textField name="reasonExpense" value="Account of Internet" readonly="readonly"/>
 					<span class="help-inline">${hasErrors(bean: internetInstance, field: 'reasonExpense', 'error')}</span>
 				</div>
 			</div>

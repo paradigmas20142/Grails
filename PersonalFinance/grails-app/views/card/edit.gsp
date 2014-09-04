@@ -4,7 +4,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'card.label', default: 'Card')}" />
-		<title><g:message code="default.edit.label" args="[entityName]" /></title>
+		<title>Edit Card</title>
 	</head>
 	<body>
 		<a href="#edit-card" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>

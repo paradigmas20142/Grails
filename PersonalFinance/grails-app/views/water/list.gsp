@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'water.label', default: 'Water')}" />
-	<title><g:message code="default.list.label" args="[entityName]" /></title>
+	<title>List Water</title>
 </head>
 
 <body>
