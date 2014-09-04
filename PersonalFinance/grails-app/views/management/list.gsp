@@ -10,7 +10,12 @@
 </head>
 
 <body>
-	
+
+<label> Gasto total em saude </label>
+<label>${spentHelth}</label>
+
+
+
 <section id="list-management" class="first">
 
 	<table class="table table-bordered">

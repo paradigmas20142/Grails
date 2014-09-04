@@ -10,11 +10,29 @@ class ManagementController {
         redirect(action: "list", params: params)
     }
 
+    def totalSpents(){
+      spent_list = {}
+      def education = new Education()
+      def helth = new Helth()
+      def movie = new Movie()
+      def theater  = new Theater()
+
+
+      def spentHelth = helth.calcSpentTotal()
+      def spentEducation = education.calcSpentTotal()
+      def spentMovie = movie.calcSpentTotal()
+      def spentTheater = theater.calcSpentTotal()
+
+      spent_list['spentHelth'] = spentHelth
+      spent_list['spentEducation'] = spentEducation
+      spent_list['spentMovie'] = spentMovie
+      spent_list['spentTheater'] = spentTheater
+
+    }
+
     def list(Integer max) {
-        def education = new Education()
-        def helth = new Helth()
         params.max = Math.min(max ?: 10, 100)
-        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),education: education,helth: helth]
+        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),education: education,spentHelth: spentHelth]
     }
 
     def create() {
