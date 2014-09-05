@@ -1,5 +1,6 @@
 package personalfinance.save
 import  personalfinance.*
+import personalfinance.leisure.*
 import org.springframework.dao.DataIntegrityViolationException
 
 class ManagementController {
@@ -11,28 +12,34 @@ class ManagementController {
     }
 
     def totalSpents(){
-      spent_list = {}
-      def education = new Education()
-      def helth = new Helth()
-      def movie = new Movie()
-      def theater  = new Theater()
+
+      //  def education = new Education()
+      //  def helth = new Helth()
+      //  def movie = new Movie()
+      //  def theater  = new Theater()
 
 
-      def spentHelth = helth.calcSpentTotal()
-      def spentEducation = education.calcSpentTotal()
-      def spentMovie = movie.calcSpentTotal()
-      def spentTheater = theater.calcSpentTotal()
+      def spent_list = {}
+      spent_list =[ spentHelth:Helth.calcSpentTotal(),
+      spentEducation:Education.calcSpentTotal(),
+      spentMovie:Movie.calcSpentTotal()
+      ]
 
-      spent_list['spentHelth'] = spentHelth
-      spent_list['spentEducation'] = spentEducation
-      spent_list['spentMovie'] = spentMovie
-      spent_list['spentTheater'] = spentTheater
+      return spent_list
+        // spent_list['spentEducation'] = spentEducation
+        // spent_list['spentMovie'] = spentMovie
+        // spent_list['spentTheater'] = spentTheater
+
 
     }
 
     def list(Integer max) {
+        def spent_list
+        spent_list = totalSpents()
+        print "=========="
+        print spent_list
         params.max = Math.min(max ?: 10, 100)
-        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),education: education,spentHelth: spentHelth]
+        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),spent_list:spent_list]
     }
 
     def create() {

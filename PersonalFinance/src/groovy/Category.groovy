@@ -7,14 +7,7 @@ abstract class Category {
     String formPayment
 
 
-    //static allowedMethods = [calcSpentTotal: "calcSpentTotal"]
-
-
-    def abateSalario(int salarioAtual){
-      return salarioAtual - valorGasto
-    }
-
-    def calcSpentTotal (def className) {
+    static Integer calcSpentTotal (def className) {
       def list_object = className.getAll()
       def calcSpentTotal = 0
         list_object.each {value ->

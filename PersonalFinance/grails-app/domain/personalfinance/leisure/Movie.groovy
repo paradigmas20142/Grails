@@ -5,7 +5,7 @@ class Movie extends personalfinance.Leisure {
     Integer spentTicket
     String movieName
 
-   def calcSpentTotal(){
+   static def calcSpentTotal(){
     super.calcSpentTotal(Movie)
    }
 

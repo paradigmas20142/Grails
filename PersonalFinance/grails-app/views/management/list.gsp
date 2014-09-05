@@ -11,11 +11,8 @@
 
 <body>
 
-<label> Gasto total em saude </label>
-<label>${spentHelth}</label>
-
-
-
+<label>${spent_list}</label>
+	
 <section id="list-management" class="first">
 
 	<table class="table table-bordered">
