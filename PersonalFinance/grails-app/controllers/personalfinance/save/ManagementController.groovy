@@ -1,5 +1,6 @@
 package personalfinance.save
 import  personalfinance.*
+import personalfinance.leisure.*
 import org.springframework.dao.DataIntegrityViolationException
 
 class ManagementController {
@@ -10,11 +11,20 @@ class ManagementController {
         redirect(action: "list", params: params)
     }
 
+    def totalSpents(){
+      def spent_list = {}
+      spent_list =[ spentHelth:Helth.calcSpentTotal(),
+      spentEducation:Education.calcSpentTotal(),
+      spentMovie:Movie.calcSpentTotal()
+      ]
+      return spent_list
+    }
+
     def list(Integer max) {
-        def education = new Education()
-        def helth = new Helth()
+        def spent_list
+        spent_list = totalSpents()
         params.max = Math.min(max ?: 10, 100)
-        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),education: education,helth: helth]
+        [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),spent_list:spent_list]
     }
 
     def create() {

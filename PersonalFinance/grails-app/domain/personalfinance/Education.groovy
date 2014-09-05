@@ -8,7 +8,7 @@ class Education extends Category {
     Book book
 
     
-   def calcSpentTotal(){
+   static Integer calcSpentTotal(){
     super.calcSpentTotal(Education)
    }
 

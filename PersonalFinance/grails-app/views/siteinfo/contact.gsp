@@ -1,49 +1,60 @@
 <head>
-	<title>Tutorial de Instalação</title>
-	<meta name="layout" content="kickstart" />
+<title>Tutorial de Instalação</title>
+<meta name="layout" content="kickstart" />
 </head>
 
 <body>
-	<div class="center">
-		<h2>Plugins Utilizados</h2>
-			<p><h3><font color="ff0000">Bootstrap Twitter</font></h3>
-				<h4>(plugin utilizado na interface)</h4></p>
-			<p><h3><font color="ff0000">jQuery e jQuery-ui</font></h3>
-				<h4>(plugins utilizados para a criação de campos dinâmicos)</h4></p>
-			<p><h3><font color="ff0000">Resource</font></h3>
-				<h4>(plugin utilizado para classes abstratas no banco)</h4></p>
-			<p><h3><font color="ff0000">Spring Security</font></h3>
-				<h4>(plugin utilizado no login)</h4></p>
-						
-		<br></br>
+<div class="center">
+<h2>Plugins Utilizados</h2>
+<p><h3><font color="ff0000">Bootstrap Twitter</font></h3>
+<h4>(plugin utilizado na interface)</h4></p>
+<p><h3><font color="ff0000">jQuery e jQuery-ui</font></h3>
+<h4>(plugins utilizados para a criação de campos dinâmicos)</h4></p>
+<p><h3><font color="ff0000">Resource</font></h3>
+<h4>(plugin utilizado para classes abstratas no banco)</h4></p>
+<p><h3><font color="ff0000">Spring Security</font></h3>
+<h4>(plugin utilizado no login)</h4></p>
 
-		<h2>Instalação Bootstrap Twitter</h2>
-			<p><h3> Na classe BuildConfig.groovy no caminho grails-app/conf adicione as seguintes linhas:</h3></p> 
-			<h4> <p>compile ':kickstart-with-bootstrap:0.8.9'
-				<p>runtime ':jquery:1.8.3'
-        		<p>compile ':lesscss-resources:1.3.0.3'</h4>	
-        	<p><h3> Em seguida rode o comando (cuidado, pois este comando sobrescreve algumas views):</h3></p>
-        		<h4> <p>grails kickstart</h4>	
-        	<p><h3> Rode, então, o comando:</h3></p>
-        		<h4> <p>grails generate-views NomeDoDiretorio.NomeDoArquivo</h4>
-        	<p><h3> Caso já tenha sido gerado as views da classe estas terão de ser sobrescritas para que fique no padrão do plugin</h3></p> 
-        	<p><h3> Execute o aplicativo com:</h3></p> 
-        		<h4> <p>grails run-app</h4>
+<br></br>
 
-        <br></br>
+<h2>Instalação Bootstrap Twitter</h2>
+<p><h3> Na classe BuildConfig.groovy no caminho grails-app/conf adicione as seguintes linhas:</h3></p> 
+<h4> <p>compile ':kickstart-with-bootstrap:0.8.9'
+<p>runtime ':jquery:1.8.3'
+<p>compile ':lesscss-resources:1.3.0.3'</h4>  
+<p><h3> Em seguida rode o comando (cuidado, pois este comando sobrescreve algumas views):</h3></p>
+                                                                                           <h4> <p>grails kickstart</h4> 
+                                                                                           <p><h3> Rode, então, o comando:</h3></p>
+                                                                                           <h4> <p>grails generate-views NomeDoDiretorio.NomeDoArquivo</h4>
+                                                                                           <p><h3> Caso já tenha sido gerado as views da classe estas terão de ser sobrescritas para que fique no padrão do plugin</h3></p> 
+                                                                                           <p><h3> Execute o aplicativo com:</h3></p> 
+                                                                                           <h4> <p>grails run-app</h4>
 
-        <h2>Instalação jQuery e JQuery-ui</h2>
+                                                                                           <br></br>
 
-        <br></br>
+                                                                                           <h2>Instalação jQuery e JQuery-ui</h2>
+                                                                                           <h4> <p>No arquivo BuildConfig adcione em plugins: </h4> 
+                                                                                           <p><h3> compile ":jquery-ui:1.10.3"</h3></p>
+                                                                                           <p><h3> Rode o comando grails run-app</h3></p>
+                                                                                           <br></br>
 
-        <h2>Instalação Resource</h2>
+                                                                                           <h2>Instalação Resource</h2>
+                                                                                           <h4> <p>No arquivo BuildConfig adcione em plugins: </h4> 
+                                                                                           <p><h3> runtime ":resources:1.2"</h3></p>
 
-        <br></br>
+                                                                                           <p><h3> Rode o comando grails run-app</h3></p>
+                                                                                           <br></br>
 
-        <h2>Instalação Spring Security</h2>
+                                                                                           <h2>Instalação Spring Security</h2>
+
+                    
+
+                                                                                           <h2>Instalação da API do google</h2>
+                                                                                           <h4> <p>No arquivo BuildConfig adcione em plugins: </h4> 
+                                                                                           <p><h3> compile ":google-visualization:0.7"</h3></p>
+
+                                                                                           <p><h3> Rode o comando grails run-app</h3></p>
 
 
-        	
-
-	</div>
-</body>
+                                                                                           </div>
+                                                                                           </body>
