@@ -20,12 +20,13 @@
       <th>Health</th>
       <th>Education</th>
       <th>Movie</th>
-      <th>Theater</th>
     </tr>    
     </thead>
     <tbody>
       <tr>
-        <td>value</td>
+       <td>${spent_list["spentHelth"]}</td>
+       <td>${spent_list["spentEducation"]}</td>
+       <td>${spent_list["spentMovie"]}</td>
       </tr>
     </tbody>
     </table>

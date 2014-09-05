@@ -13,12 +13,6 @@ class ManagementController {
 
     def totalSpents(){
 
-      //  def education = new Education()
-      //  def helth = new Helth()
-      //  def movie = new Movie()
-      //  def theater  = new Theater()
-
-
       def spent_list = {}
       spent_list =[ spentHelth:Helth.calcSpentTotal(),
       spentEducation:Education.calcSpentTotal(),
@@ -26,10 +20,6 @@ class ManagementController {
       ]
 
       return spent_list
-        // spent_list['spentEducation'] = spentEducation
-        // spent_list['spentMovie'] = spentMovie
-        // spent_list['spentTheater'] = spentTheater
-
 
     }
 
