@@ -2,30 +2,64 @@
 <!doctype html>
 <html>
 <head>
+
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
+
+function calcChartVisualization(list,salary){
+    
+    var spentTotalCategory = 0;
+    var data
+    for (var k in list){
+        spentTotalCategory += list[k];
+    }
+    
+    if (spentTotalCategory >= salary){
+     data  = google.visualization.arrayToDataTable([
+            ['Category', 'Spent on salary'],
+            ['Broked',     spentTotalCategory]
+            ]);
+    }
+
+    else{
+     var remain = salary - spentTotalCategory;
+     data  = google.visualization.arrayToDataTable([
+            ['Category', 'Spent on salary'],
+            ['Health',     list["spentHelth"]],
+            ['Education',     list["spentEducation"]],
+            ['Movie',     list["spentMovie"]],
+            ['Remain',     remain]
+            ]);
+
+    }
+
+    return data;
+}
+
+function convToHash(){
+
+  var new_hash = {};
+  new_hash["spentHelth"] = ${spent_list["spentHelth"]};
+  new_hash["spentEducation"] = ${spent_list["spentEducation"]};
+  new_hash["spentMovie"] = ${spent_list["spentMovie"]};
+  return new_hash;
+}
+
+
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
 function drawChart() {
-  alert(${spent_list["spentHelth"]});
-  var data = google.visualization.arrayToDataTable([
-      ['Task', 'Days per Month'],
-      ['Work',     11],
-      ['Eat',      2],
-      ['Commute',  2],
-      ['Watch TV', 2],
-      ['Sleep',    1000]
-      ]);
 
+  var data = calcChartVisualization(convToHash(),3000);
   var options = {
-title: 'My current spents',
-       is3D: true,
+title: 'My Daily Activities'
   };
 
-  var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
   chart.draw(data, options);
 }
-</script>
+                                                                                                                                                      </script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'management.label', default: 'Management')}" />
@@ -54,9 +88,7 @@ title: 'My current spents',
     </tbody>
     </table>
 
-<gvisualization:apiImport/>
 
-<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 
 		<g:each in="${managementInstanceList}" status="i" var="managementInstance">
 			<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
@@ -70,6 +102,8 @@ title: 'My current spents',
 	</div>
 </section>
 
+<gvisualization:apiImport/>
+<div id="piechart" style="width: 900px; height: 500px;"></div>
 </body>
 
 </html>
