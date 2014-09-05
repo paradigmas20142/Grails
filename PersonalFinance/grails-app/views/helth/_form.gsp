@@ -38,14 +38,6 @@
 </div>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: helthInstance, field: 'spentTotal', 'error')} ">
-	<label for="spentTotal">
-		<g:message code="helth.spentTotal.label" default="Spent Total" />
-		
-	</label>
-	<g:field name="spentTotal" type="number" value="${helthInstance.spentTotal}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: helthInstance, field: 'spentOnMedicine', 'error')} ">
 <div class = "medicine">
 <label>Comprou remedio?</label>

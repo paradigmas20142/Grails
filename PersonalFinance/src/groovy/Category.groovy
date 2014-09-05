@@ -18,5 +18,6 @@ abstract class Category {
 
     static constraints = {
     spentTotal nullable: true
+    reasonExpense nullable: true
     }
 }

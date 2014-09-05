@@ -1,15 +1,6 @@
 <%@ page import="personalfinance.leisure.Theater" %>
 
 
-
-			<div class="control-group fieldcontain ${hasErrors(bean: theaterInstance, field: 'spentTotal', 'error')} ">
-				<label for="spentTotal" class="control-label"><g:message code="theater.spentTotal.label" default="Spent Total" /></label>
-				<div class="controls">
-					<g:field type="number" name="spentTotal" value="${theaterInstance.spentTotal}"/>
-					<span class="help-inline">${hasErrors(bean: theaterInstance, field: 'spentTotal', 'error')}</span>
-				</div>
-			</div>
-
 			<div class="control-group fieldcontain ${hasErrors(bean: theaterInstance, field: 'data', 'error')} required">
 				<label for="data" class="control-label"><g:message code="theater.data.label" default="Data" /><span class="required-indicator">*</span></label>
 				<div class="controls">
@@ -34,11 +25,19 @@
 				</div>
 			</div>
 
-			<div class="control-group fieldcontain ${hasErrors(bean: theaterInstance, field: 'reasonExpense', 'error')} ">
-				<label for="reasonExpense" class="control-label"><g:message code="theater.reasonExpense.label" default="Reason Expense" /></label>
+			<div class="control-group fieldcontain ${hasErrors(bean: theaterInstance, field: 'playName', 'error')} ">
+				<label for="playName" class="control-label"><g:message code="theater.playName.label" default="Play Name" /></label>
 				<div class="controls">
-					<g:textField name="reasonExpense" value="${theaterInstance?.reasonExpense}"/>
-					<span class="help-inline">${hasErrors(bean: theaterInstance, field: 'reasonExpense', 'error')}</span>
+					<g:textField name="playName" value="${theaterInstance?.playName}"/>
+					<span class="help-inline">${hasErrors(bean: theaterInstance, field: 'playName', 'error')}</span>
+				</div>
+			</div>
+
+			<div class="control-group fieldcontain ${hasErrors(bean: theaterInstance, field: 'spentPlay', 'error')} required">
+				<label for="spentPlay" class="control-label"><g:message code="theater.spentPlay.label" default="Spent Play" /><span class="required-indicator">*</span></label>
+				<div class="controls">
+					<g:field type="number" name="spentPlay" required="" value="${theaterInstance.spentPlay}"/>
+					<span class="help-inline">${hasErrors(bean: theaterInstance, field: 'spentPlay', 'error')}</span>
 				</div>
 			</div>
 

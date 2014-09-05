@@ -20,7 +20,7 @@ $("label.creditcard").children("input[name=forPayment]").click(function(){
   });
 
   $("label.buyMedicine").children("input[name=medicine]").click(function(){
-   $("div.medicine").append('<table border=1 style="width:700px; margin-left:80px;" class = "spentMedicine" "> <tr><td><label for="valorGasto">Gastos</label></td>  <td><input type="number" name="spentMedicine" value="spentMedicine" id="_valorGasto"></td></tr></table>');
+   $("div.medicine").append('<table border=1 style="width:700px; margin-left:80px;" class = "spentOnMedicine" "> <tr><td><label for="valorGasto">Gastos</label></td>  <td><input type="number" name="spentOnMedicine" value="spentOnMedicine" id="_valorGasto"></td></tr></table>');
   });
 
   $("label.dontBuyMedicine").children("input[name=medicine]").click(function(){

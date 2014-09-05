@@ -2,14 +2,6 @@
 
 
 
-			<div class="control-group fieldcontain ${hasErrors(bean: educationInstance, field: 'spentTotal', 'error')} ">
-				<label for="spentTotal" class="control-label"><g:message code="education.spentTotal.label" default="Spent Total" /></label>
-				<div class="controls">
-					<g:field type="number" name="spentTotal" value="${educationInstance.spentTotal}"/>
-					<span class="help-inline">${hasErrors(bean: educationInstance, field: 'spentTotal', 'error')}</span>
-				</div>
-			</div>
-
 			<div class="control-group fieldcontain ${hasErrors(bean: educationInstance, field: 'spentTuition', 'error')} ">
 				<label for="spentTuition" class="control-label"><g:message code="education.spentTuition.label" default="Spent Tuition" /></label>
 				<div class="controls">

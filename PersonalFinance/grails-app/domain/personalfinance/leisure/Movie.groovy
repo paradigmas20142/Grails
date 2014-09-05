@@ -3,6 +3,7 @@ package personalfinance.leisure
 class Movie extends personalfinance.Leisure {
 
     Integer spentTicket
+    Integer food
     String movieName
 
    static def calcSpentTotal(){
@@ -11,5 +12,7 @@ class Movie extends personalfinance.Leisure {
 
 
     static constraints = {
+    food nullable: true
+
     }
 }

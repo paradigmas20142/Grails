@@ -19,7 +19,19 @@ class MovieController {
         [movieInstance: new Movie(params)]
     }
 
+    def calcInstanceSpent(params){
+      def instanceSpent = 0
+      params.each {key,value ->
+      if (key.size() > 5 && key.substring(0,5) == "spent"){
+        instanceSpent += value.toInteger()
+        }
+      }
+      return instanceSpent
+    }
+
+
     def save() {
+        params["spentTotal"] = calcInstanceSpent(params)
         def movieInstance = new Movie(params)
         if (!movieInstance.save(flush: true)) {
             render(view: "create", model: [movieInstance: movieInstance])

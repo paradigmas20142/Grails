@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'theater.label', default: 'Theater')}" />
-	<title>Show Theater</title>
+	<title><g:message code="default.show.label" args="[entityName]" /></title>
 </head>
 
 <body>
@@ -46,9 +46,23 @@
 			</tr>
 		
 			<tr class="prop">
+				<td valign="top" class="name"><g:message code="theater.playName.label" default="Play Name" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: theaterInstance, field: "playName")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
 				<td valign="top" class="name"><g:message code="theater.reasonExpense.label" default="Reason Expense" /></td>
 				
 				<td valign="top" class="value">${fieldValue(bean: theaterInstance, field: "reasonExpense")}</td>
+				
+			</tr>
+		
+			<tr class="prop">
+				<td valign="top" class="name"><g:message code="theater.spentPlay.label" default="Spent Play" /></td>
+				
+				<td valign="top" class="value">${fieldValue(bean: theaterInstance, field: "spentPlay")}</td>
 				
 			</tr>
 		

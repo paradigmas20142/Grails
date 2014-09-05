@@ -15,7 +15,8 @@ class ManagementController {
       def spent_list = {}
       spent_list =[ spentHelth:Helth.calcSpentTotal(),
       spentEducation:Education.calcSpentTotal(),
-      spentMovie:Movie.calcSpentTotal()
+      spentMovie:Movie.calcSpentTotal(),
+      spentTheater:Theater.calcSpentTotal()
       ]
       return spent_list
     }

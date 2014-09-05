@@ -19,7 +19,18 @@ class EducationController {
         [educationInstance: new Education(params)]
     }
 
+    def calcInstanceSpent(params){
+      def instanceSpent = 0
+      params.each {key,value ->
+      if (key.size() > 5 && key.substring(0,5) == "spent"){
+        instanceSpent += value.toInteger()
+        }
+      }
+      return instanceSpent
+    }
+
     def save() {
+        params["spentTotal"] = calcInstanceSpent(params)
         def educationInstance = new Education(params)
         if (!educationInstance.save(flush: true)) {
             render(view: "create", model: [educationInstance: educationInstance])

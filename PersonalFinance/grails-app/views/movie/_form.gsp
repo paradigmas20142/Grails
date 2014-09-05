@@ -2,14 +2,6 @@
 
 
 
-			<div class="control-group fieldcontain ${hasErrors(bean: movieInstance, field: 'spentTotal', 'error')} ">
-				<label for="spentTotal" class="control-label"><g:message code="movie.spentTotal.label" default="Spent Total" /></label>
-				<div class="controls">
-					<g:field type="number" name="spentTotal" value="${movieInstance.spentTotal}"/>
-					<span class="help-inline">${hasErrors(bean: movieInstance, field: 'spentTotal', 'error')}</span>
-				</div>
-			</div>
-
 			<div class="control-group fieldcontain ${hasErrors(bean: movieInstance, field: 'data', 'error')} required">
 				<label for="data" class="control-label"><g:message code="movie.data.label" default="Data" /><span class="required-indicator">*</span></label>
 				<div class="controls">

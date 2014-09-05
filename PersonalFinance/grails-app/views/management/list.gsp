@@ -28,6 +28,7 @@ function calcChartVisualization(list,salary){
             ['Health',     list["spentHelth"]],
             ['Education',     list["spentEducation"]],
             ['Movie',     list["spentMovie"]],
+            ['Theater',     list["spentTheater"]],
             ['Remain',     remain]
             ]);
 
@@ -42,6 +43,7 @@ function convToHash(){
   new_hash["spentHelth"] = ${spent_list["spentHelth"]};
   new_hash["spentEducation"] = ${spent_list["spentEducation"]};
   new_hash["spentMovie"] = ${spent_list["spentMovie"]};
+  new_hash["spentTheater"] = ${spent_list["spentTheater"]};
   return new_hash;
 }
 
@@ -77,6 +79,7 @@ title: 'My Daily Activities'
       <th>Health</th>
       <th>Education</th>
       <th>Movie</th>
+      <th>Theater</th>
     </tr>    
     </thead>
     <tbody>
@@ -84,6 +87,7 @@ title: 'My Daily Activities'
        <td>${spent_list["spentHelth"]}</td>
        <td>${spent_list["spentEducation"]}</td>
        <td>${spent_list["spentMovie"]}</td>
+       <td>${spent_list["spentTheater"]}</td>
       </tr>
     </tbody>
     </table>

@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'theater.label', default: 'Theater')}" />
-	<title>List Theater</title>
+	<title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 			
 				<g:sortableColumn property="place" title="${message(code: 'theater.place.label', default: 'Place')}" />
 			
-				<g:sortableColumn property="reasonExpense" title="${message(code: 'theater.reasonExpense.label', default: 'Reason Expense')}" />
+				<g:sortableColumn property="playName" title="${message(code: 'theater.playName.label', default: 'Play Name')}" />
 			
 			</tr>
 		</thead>
@@ -41,7 +41,7 @@
 			
 				<td>${fieldValue(bean: theaterInstance, field: "place")}</td>
 			
-				<td>${fieldValue(bean: theaterInstance, field: "reasonExpense")}</td>
+				<td>${fieldValue(bean: theaterInstance, field: "playName")}</td>
 			
 			</tr>
 		</g:each>

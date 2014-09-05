@@ -5,14 +5,19 @@ package personalfinance.leisure
 import org.junit.*
 import grails.test.mixin.*
 
+/**
+ * TheaterControllerTests
+ * A unit test class is used to test individual methods or blocks of code without considering the surrounding infrastructure
+ */
 @TestFor(TheaterController)
 @Mock(Theater)
 class TheaterControllerTests {
 
+
     def populateValidParams(params) {
-        assert params != null
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
+      assert params != null
+      // TODO: Populate valid properties like...
+      //params["name"] = 'someValidName'
     }
 
     void testIndex() {
@@ -29,9 +34,9 @@ class TheaterControllerTests {
     }
 
     void testCreate() {
-        def model = controller.create()
+       def model = controller.create()
 
-        assert model.theaterInstance != null
+       assert model.theaterInstance != null
     }
 
     void testSave() {
@@ -56,6 +61,7 @@ class TheaterControllerTests {
         assert flash.message != null
         assert response.redirectedUrl == '/theater/list'
 
+
         populateValidParams(params)
         def theater = new Theater(params)
 
@@ -73,6 +79,7 @@ class TheaterControllerTests {
 
         assert flash.message != null
         assert response.redirectedUrl == '/theater/list'
+
 
         populateValidParams(params)
         def theater = new Theater(params)
@@ -93,6 +100,7 @@ class TheaterControllerTests {
         assert response.redirectedUrl == '/theater/list'
 
         response.reset()
+
 
         populateValidParams(params)
         def theater = new Theater(params)
