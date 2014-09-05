@@ -21,8 +21,11 @@
 			<div class="span2">
 				<h4>Company</h4>
 				<ul class="unstyled">
-					<li><a href="${createLink(uri: '/about')}"><g:message code="default.about.label"/></a></li>
-					<li><a href="${createLink(uri: '/contact')}"><g:message code="default.contact.label"/></a></li>
+
+					<li><a href="${createLink(uri: '/about')}"><g:message code="Relatório"/></a></li>
+					<li><a href="${createLink(uri: '/contact')}"><g:message code="Tutorial"/></a></li>
+					<li><a href="https://github.com/paradigmas20142/Grails"><g:message code="Repositório"/></a></li>
+
 				</ul>
 			</div>
 			<div class="span8">
