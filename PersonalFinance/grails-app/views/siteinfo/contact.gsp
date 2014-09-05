@@ -86,8 +86,7 @@
 			<p><h3> Abra o terminal e digite os seguintes comandos:</h3></p> 
 			<h4><p>sudo apt-get install mysql-server</h4>
 			<h4><p>sudo apt-get install mysql-workbench</h4>
-			<h4><p>sudo apt-get install mysql-client-5.5</h4>
-			<p><h3> Abra o terminal e digite os seguintes comandos:</h3></p> 
+			<h4><p>sudo apt-get install mysql-client-5.5</h4> 
 			<p><h3> Para a utilização do Banco de Dados no seu projeto Grails, adicione a seguinte linha no arquivo BuildConfig.groovy (localizado no diretório grails-app/conf do seu projeto):</h3></p> 
 			<h4><p>runtime 'mysql:mysql-connector-java:5.1.16</h4>
 			<p><h3> No arquivo DataSource.groovy, também localizado no diretório grails-app/conf do seu projeto, modifique as linhas de acordo com o seu Banco de dados. Nos campos username e password coloque o seu username e pessword respectivamente. Dentro das chaves de dataSource  adicione as seguintes linha (abaixo de pooled = true): </h3></p> 
