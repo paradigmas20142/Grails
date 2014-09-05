@@ -11,6 +11,25 @@
 
 <body>
 
+
+<table class = "table">
+  <thead>
+    <tr>
+      </tr>
+      <tr>
+      <th>Health</th>
+      <th>Education</th>
+      <th>Movie</th>
+      <th>Theater</th>
+    </tr>    
+    </thead>
+    <tbody>
+      <tr>
+        <td>value</td>
+      </tr>
+    </tbody>
+    </table>
+
 <label>${spent_list}</label>
 	
 <section id="list-management" class="first">
