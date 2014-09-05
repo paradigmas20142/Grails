@@ -1,8 +1,31 @@
-
 <%@ page import="personalfinance.save.Management" %>
 <!doctype html>
 <html>
 <head>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+  alert(${spent_list["spentHelth"]});
+  var data = google.visualization.arrayToDataTable([
+      ['Task', 'Days per Month'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    1000]
+      ]);
+
+  var options = {
+title: 'My current spents',
+       is3D: true,
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+  chart.draw(data, options);
+}
+</script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="layout" content="kickstart" />
 	<g:set var="entityName" value="${message(code: 'management.label', default: 'Management')}" />
@@ -31,17 +54,10 @@
     </tbody>
     </table>
 
-<label>${spent_list}</label>
-	
-<section id="list-management" class="first">
+<gvisualization:apiImport/>
 
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-			
-			</tr>
-		</thead>
-		<tbody>
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
 		<g:each in="${managementInstanceList}" status="i" var="managementInstance">
 			<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 			

@@ -47,7 +47,6 @@ grails.project.dependency.resolution = {
 
     plugins {
         runtime ":hibernate:$grailsVersion"
-        runtime ":jquery:1.8.3"
         runtime ":resources:1.2"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
@@ -64,5 +63,7 @@ grails.project.dependency.resolution = {
         compile ':kickstart-with-bootstrap:0.8.9'
         runtime ':jquery:1.8.3'
         compile ':lesscss-resources:1.3.0.3'
+        compile ":jquery-ui:1.10.3"
+        compile ":google-visualization:0.7"
     }
 }

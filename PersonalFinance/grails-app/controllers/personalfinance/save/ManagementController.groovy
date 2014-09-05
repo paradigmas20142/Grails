@@ -12,22 +12,17 @@ class ManagementController {
     }
 
     def totalSpents(){
-
       def spent_list = {}
       spent_list =[ spentHelth:Helth.calcSpentTotal(),
       spentEducation:Education.calcSpentTotal(),
       spentMovie:Movie.calcSpentTotal()
       ]
-
       return spent_list
-
     }
 
     def list(Integer max) {
         def spent_list
         spent_list = totalSpents()
-        print "=========="
-        print spent_list
         params.max = Math.min(max ?: 10, 100)
         [managementInstanceList: Management.list(params), managementInstanceTotal: Management.count(),spent_list:spent_list]
     }
